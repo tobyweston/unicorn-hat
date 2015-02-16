@@ -1,11 +1,5 @@
-Raspberry Pi ws2812 Library
-===========================
+# Raspberry Pi ws2812 Library
 
-Taken from https://github.com/pimoroni/unicorn-hat which in turn came from https://github.com/626Pilot/RaspberryPi-NeoPixel-WS2812
+The library uses ws2812 as the underlying driver. It's a C library from https://github.com/626Pilot/RaspberryPi-NeoPixel-WS2812, although I've taken the modified version from [Pimoroni](https://github.com/pimoroni/unicorn-hat)
 
-
-Changes from Pimoroni:
-
-* Adapted into a library for inclusion in both C and Python bindings
-* Fixed the way brightness is applied to the buffer
-* Added functions for setting up with a flexible number of pixels
+I used [SWIG](http://www.swig.org/) to generate the JNI bindings.
