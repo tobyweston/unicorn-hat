@@ -35,7 +35,7 @@ public class Display {
 
 	public void setPixelColor(int x, int y, Color colour) {
 		long index = getIndexFrom(x, y);
-		ws2812.setPixelColor(index, (short) 255, (short) 0, (short) 255);
+		ws2812.setPixelColor(index, (short) colour.getRed(), (short) colour.getGreen(), (short) colour.getBlue());
 	}
 
 	public void rotate(Orientation orientation) {
