@@ -6,8 +6,10 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
+package bad.robot.unicorn.ws2812;
 
 public class ws2812 {
+
   public static void init(int numPixels) {
     ws2812JNI.init(numPixels);
   }

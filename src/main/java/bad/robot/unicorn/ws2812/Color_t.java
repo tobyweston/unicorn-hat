@@ -6,8 +6,11 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
+package bad.robot.unicorn.ws2812;
+
 
 public class Color_t {
+
   private long swigCPtr;
   protected boolean swigCMemOwn;
 

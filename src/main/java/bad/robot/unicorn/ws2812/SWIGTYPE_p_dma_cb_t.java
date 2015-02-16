@@ -6,6 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
+package bad.robot.unicorn.ws2812;
 
 public class SWIGTYPE_p_dma_cb_t {
   private long swigCPtr;
