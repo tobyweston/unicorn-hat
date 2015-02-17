@@ -6,6 +6,7 @@ import org.junit.Test;
 
 import java.awt.*;
 
+import static bad.robot.unicorn.Sleep.sleep;
 import static java.util.concurrent.TimeUnit.*;
 
 public class BasicIntegrationTest {
@@ -17,7 +18,7 @@ public class BasicIntegrationTest {
 				Unicorn unicorn = new NeoPixelDisplayMatrix();
 				unicorn.setPixelColor(x, y, Color.magenta);
 				unicorn.show();
-				MILLISECONDS.sleep(500);
+				sleep(500, MILLISECONDS);
 			}
 		}
 		SECONDS.sleep(5);
