@@ -10,6 +10,10 @@ package bad.robot.unicorn.neopixel;
 
 class ws2812 {
 
+  static {
+	System.loadLibrary("ws2812-RPi");
+  }
+
   static void init(int numPixels) {
     ws2812JNI.init(numPixels);
   }
