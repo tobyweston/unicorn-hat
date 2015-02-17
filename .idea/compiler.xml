@@ -26,5 +26,8 @@
         <module name="unicorn-hat-java" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="unicorn-hat-java" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
