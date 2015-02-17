@@ -33,12 +33,19 @@ public class NeoPixelDisplayMatrix implements Unicorn {
         return matrix[x][y];
     }
 
+    @Override
     public void setPixelColor(int x, int y, Color colour) {
         long index = getIndexFrom(x, y);
         ws2812.setPixelColor(index, (short) colour.getRed(), (short) colour.getGreen(), (short) colour.getBlue());
     }
 
+    @Override
     public void rotate(Orientation orientation) {
         this.orientation = orientation;
+    }
+
+    @Override
+    public void show() {
+        ws2812.show();
     }
 }
