@@ -2,7 +2,7 @@ package bad.robot.unicorn.integration.jni;
 
 import org.junit.Test;
 
-public class LdLibraryPathIntegrationTest {
+public class LdLibraryPathTest {
 
 	@Test
 	public void sharedObjectShouldLoad() {
