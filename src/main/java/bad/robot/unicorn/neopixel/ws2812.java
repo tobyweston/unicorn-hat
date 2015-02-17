@@ -6,7 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
-package bad.robot.unicorn.ws2812;
+package bad.robot.unicorn.neopixel;
 
 public class ws2812 {
 

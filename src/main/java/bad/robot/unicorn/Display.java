@@ -1,6 +1,6 @@
 package bad.robot.unicorn;
 
-import bad.robot.unicorn.ws2812.ws2812;
+import bad.robot.unicorn.neopixel.ws2812;
 
 import java.awt.*;
 
