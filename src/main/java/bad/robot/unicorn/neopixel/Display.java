@@ -1,5 +1,6 @@
-package bad.robot.unicorn;
+package bad.robot.unicorn.neopixel;
 
+import bad.robot.unicorn.Orientation;
 import bad.robot.unicorn.neopixel.ws2812;
 
 import java.awt.*;

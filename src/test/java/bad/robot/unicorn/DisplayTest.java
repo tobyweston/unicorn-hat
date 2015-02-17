@@ -1,5 +1,6 @@
 package bad.robot.unicorn;
 
+import bad.robot.unicorn.neopixel.Display;
 import org.junit.Test;
 
 import static org.hamcrest.core.Is.is;

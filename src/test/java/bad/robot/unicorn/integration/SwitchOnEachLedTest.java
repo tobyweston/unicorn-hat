@@ -1,6 +1,6 @@
 package bad.robot.unicorn.integration;
 
-import bad.robot.unicorn.Display;
+import bad.robot.unicorn.neopixel.Display;
 import bad.robot.unicorn.neopixel.ws2812;
 import org.junit.Test;
 
@@ -16,7 +16,7 @@ public class SwitchOnEachLedTest {
 			for (int x = 1; x < 8; x++) {
 				Display display = new Display();
 				display.setPixelColor(x, y, Color.magenta);
-				ws2812.show();
+				// ws2812.show();
 				MILLISECONDS.sleep(500);
 			}
 		}
