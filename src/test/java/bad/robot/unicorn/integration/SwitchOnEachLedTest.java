@@ -1,7 +1,6 @@
 package bad.robot.unicorn.integration;
 
 import bad.robot.unicorn.neopixel.Display;
-import bad.robot.unicorn.neopixel.ws2812;
 import org.junit.Test;
 
 import java.awt.*;
