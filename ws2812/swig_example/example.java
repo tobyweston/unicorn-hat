@@ -6,14 +6,14 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
+package bad.robot.unicorn.integration.jni;
 
 public class example {
-
-  public static void setMy_variable(double value) {
+  public static void My_variable_set(double value) {
     exampleJNI.My_variable_set(value);
   }
 
-  public static double getMy_variable() {
+  public static double My_variable_get() {
     return exampleJNI.My_variable_get();
   }
 

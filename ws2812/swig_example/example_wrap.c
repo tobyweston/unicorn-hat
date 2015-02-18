@@ -198,7 +198,7 @@ static void SWIGUNUSED SWIG_JavaThrowException(JNIEnv *jenv, SWIG_JavaExceptionC
 extern "C" {
 #endif
 
-SWIGEXPORT void JNICALL Java_exampleJNI_My_1variable_1set(JNIEnv *jenv, jclass jcls, jdouble jarg1) {
+SWIGEXPORT void JNICALL Java_bad_robot_unicorn_integration_jni_exampleJNI_My_1variable_1set(JNIEnv *jenv, jclass jcls, jdouble jarg1) {
   double arg1 ;
   
   (void)jenv;
@@ -208,7 +208,7 @@ SWIGEXPORT void JNICALL Java_exampleJNI_My_1variable_1set(JNIEnv *jenv, jclass j
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_exampleJNI_My_1variable_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jdouble JNICALL Java_bad_robot_unicorn_integration_jni_exampleJNI_My_1variable_1get(JNIEnv *jenv, jclass jcls) {
   jdouble jresult = 0 ;
   double result;
   
@@ -220,7 +220,7 @@ SWIGEXPORT jdouble JNICALL Java_exampleJNI_My_1variable_1get(JNIEnv *jenv, jclas
 }
 
 
-SWIGEXPORT jint JNICALL Java_exampleJNI_fact(JNIEnv *jenv, jclass jcls, jint jarg1) {
+SWIGEXPORT jint JNICALL Java_bad_robot_unicorn_integration_jni_exampleJNI_fact(JNIEnv *jenv, jclass jcls, jint jarg1) {
   jint jresult = 0 ;
   int arg1 ;
   int result;
@@ -234,7 +234,7 @@ SWIGEXPORT jint JNICALL Java_exampleJNI_fact(JNIEnv *jenv, jclass jcls, jint jar
 }
 
 
-SWIGEXPORT jint JNICALL Java_exampleJNI_my_1mod(JNIEnv *jenv, jclass jcls, jint jarg1, jint jarg2) {
+SWIGEXPORT jint JNICALL Java_bad_robot_unicorn_integration_jni_exampleJNI_my_1mod(JNIEnv *jenv, jclass jcls, jint jarg1, jint jarg2) {
   jint jresult = 0 ;
   int arg1 ;
   int arg2 ;
@@ -250,7 +250,7 @@ SWIGEXPORT jint JNICALL Java_exampleJNI_my_1mod(JNIEnv *jenv, jclass jcls, jint 
 }
 
 
-SWIGEXPORT jstring JNICALL Java_exampleJNI_get_1time(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jstring JNICALL Java_bad_robot_unicorn_integration_jni_exampleJNI_get_1time(JNIEnv *jenv, jclass jcls) {
   jstring jresult = 0 ;
   char *result = 0 ;
   
