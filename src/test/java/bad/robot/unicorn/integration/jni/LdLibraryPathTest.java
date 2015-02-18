@@ -21,6 +21,15 @@ public class LdLibraryPathTest {
 	}
 
 	@Test
+	public void loadSharedObjectFullyQualified() {
+		try {
+			System.loadLibrary("/home/pi/dev/unicorn-hat-java/ws2812/swig_example/libexample.so");
+		} catch (UnsatisfiedLinkError e) {
+			fail("Failed to load library from /home/pi/dev/unicorn-hat-java/ws2812/swig_example/ man!!");
+		}
+	}
+
+	@Test
 	public void sharedObjectShouldLoad() {
 		String time = example.get_time();
 		System.out.println("*******************************************************");
