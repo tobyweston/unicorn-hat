@@ -23,7 +23,7 @@ public class LdLibraryPathTest {
 	@Test
 	public void loadSharedObjectFullyQualified() {
 		try {
-			System.loadLibrary("/home/pi/dev/unicorn-hat-java/ws2812/swig_example/libexample.so");
+			System.load("/home/pi/dev/unicorn-hat-java/ws2812/swig_example/libexample.so");
 		} catch (UnsatisfiedLinkError e) {
 			fail("Failed to load library from /home/pi/dev/unicorn-hat-java/ws2812/swig_example/ man!!");
 		}

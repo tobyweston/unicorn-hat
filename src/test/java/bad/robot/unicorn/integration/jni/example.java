@@ -9,6 +9,10 @@ package bad.robot.unicorn.integration.jni;/* -----------------------------------
 
 public class example {
 
+	static {
+		System.loadLibrary("example");
+	}
+
 	public static void setMy_variable(double value) {
 		exampleJNI.My_variable_set(value);
 	}
