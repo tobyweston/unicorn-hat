@@ -11,7 +11,12 @@ package bad.robot.unicorn.neopixel;
 class ws2812 {
 
   static {
-	System.loadLibrary("ws2812-RPi");
+	  try {
+		  System.loadLibrary("ws2812-RPi");
+	  } catch (UnsatisfiedLinkError e) {
+		  e.printStackTrace(System.err);
+		  throw e;
+	  }
   }
 
   static void init(int numPixels) {
