@@ -6,6 +6,7 @@ Use [SWIG](http://www.swig.org/) to generate the JNI bindings;
 
     cd ws2812
     swig -java ws2812-RPi.i
+    swig -java -package bad.robot.unicorn.neopixel -noproxy ws2812-RPi.i
 
 Compile the `.o` files.
 
