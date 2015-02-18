@@ -12,12 +12,16 @@ import static org.junit.Assert.fail;
 public class LdLibraryPathTest {
 
 	@Test
-	public void sharedObjectShouldLoad() {
+	public void loadSharedObject() {
 		try {
 			System.loadLibrary("example");
 		} catch (UnsatisfiedLinkError e) {
 			fail("Failed to load library man!!");
 		}
+	}
+
+	@Test
+	public void sharedObjectShouldLoad() {
 		String time = example.get_time();
 		System.out.println("*******************************************************");
 		System.out.println("* Current time via JNI is :    " + time);
