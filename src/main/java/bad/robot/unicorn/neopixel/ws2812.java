@@ -8,134 +8,129 @@
 
 package bad.robot.unicorn.neopixel;
 
-class ws2812 {
-
-  static {
-	System.loadLibrary("ws2812-RPi");
-  }
-
-  static void init(int numPixels) {
+public class ws2812 {
+  public static void init(int numPixels) {
     ws2812JNI.init(numPixels);
   }
 
-  static void clear() {
+  public static void clear() {
     ws2812JNI.clear();
   }
 
-  static void show() {
+  public static void show() {
     ws2812JNI.show();
   }
 
-  static Color_t Wheel(short WheelPos) {
+  public static Color_t Wheel(short WheelPos) {
     return new Color_t(ws2812JNI.Wheel(WheelPos), true);
   }
 
-  static void colorWipe(Color_t c, short wait) {
+  public static void colorWipe(Color_t c, short wait) {
     ws2812JNI.colorWipe(Color_t.getCPtr(c), c, wait);
   }
 
-  static void rainbow(short wait) {
+  public static void rainbow(short wait) {
     ws2812JNI.rainbow(wait);
   }
 
-  static void rainbowCycle(short wait) {
+  public static void rainbowCycle(short wait) {
     ws2812JNI.rainbowCycle(wait);
   }
 
-  static void theaterChase(Color_t c, short wait) {
+  public static void theaterChase(Color_t c, short wait) {
     ws2812JNI.theaterChase(Color_t.getCPtr(c), c, wait);
   }
 
-  static void theaterChaseRainbow(short wait) {
+  public static void theaterChaseRainbow(short wait) {
     ws2812JNI.theaterChaseRainbow(wait);
   }
 
-  static short setBrightness(double b) {
+  public static short setBrightness(double b) {
     return ws2812JNI.setBrightness(b);
   }
 
-  static double getBrightness() {
+  public static double getBrightness() {
     return ws2812JNI.getBrightness();
   }
 
-  static Color_t RGB2Color(short r, short g, short b) {
+  public static Color_t RGB2Color(short r, short g, short b) {
     return new Color_t(ws2812JNI.RGB2Color(r, g, b), true);
   }
 
-  static Color_t Color(short r, short g, short b) {
+  public static Color_t Color(short r, short g, short b) {
     return new Color_t(ws2812JNI.Color(r, g, b), true);
   }
 
-  static short setPixelColor(long pixel, short r, short g, short b) {
+  public static short setPixelColor(long pixel, short r, short g, short b) {
     return ws2812JNI.setPixelColor(pixel, r, g, b);
   }
 
-  static short setPixelColorT(long pixel, Color_t c) {
+  public static short setPixelColorT(long pixel, Color_t c) {
     return ws2812JNI.setPixelColorT(pixel, Color_t.getCPtr(c), c);
   }
 
-  static Color_t getPixelColor(long pixel) {
+  public static Color_t getPixelColor(long pixel) {
     return new Color_t(ws2812JNI.getPixelColor(pixel), true);
   }
 
-  static long numPixels() {
+  public static long numPixels() {
     return ws2812JNI.numPixels();
   }
 
-  static Color_t getPixels() {
+  public static Color_t getPixels() {
     long cPtr = ws2812JNI.getPixels();
     return (cPtr == 0) ? null : new Color_t(cPtr, false);
   }
 
-  static void setPWMBit(long bitPos, short bit) {
+  public static void setPWMBit(long bitPos, short bit) {
     ws2812JNI.setPWMBit(bitPos, bit);
   }
 
-  static short getPWMBit(long bitPos) {
+  public static short getPWMBit(long bitPos) {
     return ws2812JNI.getPWMBit(bitPos);
   }
 
-  static void dumpLEDBuffer() {
+  public static void dumpLEDBuffer() {
     ws2812JNI.dumpLEDBuffer();
   }
 
-  static void dumpPWMBuffer() {
+  public static void dumpPWMBuffer() {
     ws2812JNI.dumpPWMBuffer();
   }
 
-  static void dumpPWMStatus() {
+  public static void dumpPWMStatus() {
     ws2812JNI.dumpPWMStatus();
   }
 
-  static void dumpPWMControl(long word) {
+  public static void dumpPWMControl(long word) {
     ws2812JNI.dumpPWMControl(word);
   }
 
-  static void dumpPWMDMAC() {
+  public static void dumpPWMDMAC() {
     ws2812JNI.dumpPWMDMAC();
   }
 
-  static void dumpPWM() {
+  public static void dumpPWM() {
     ws2812JNI.dumpPWM();
   }
 
-  static void dumpDMARegs() {
+  public static void dumpDMARegs() {
     ws2812JNI.dumpDMARegs();
   }
 
-  static void dumpControlBlock(SWIGTYPE_p_dma_cb_t c) {
+  public static void dumpControlBlock(SWIGTYPE_p_dma_cb_t c) {
     ws2812JNI.dumpControlBlock(SWIGTYPE_p_dma_cb_t.getCPtr(c));
   }
 
-  static void dumpTransferInformation(long TI) {
+  public static void dumpTransferInformation(long TI) {
     ws2812JNI.dumpTransferInformation(TI);
   }
 
-  static void dumpDMA() {
+  public static void dumpDMA() {
     ws2812JNI.dumpDMA();
   }
 
-  static void terminate(int dummy) {
+  public static void terminate(int dummy) {
     ws2812JNI.terminate(dummy);
   }
 

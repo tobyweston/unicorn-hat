@@ -8,9 +8,7 @@
 
 package bad.robot.unicorn.neopixel;
 
-
-class Color_t {
-
+public class Color_t {
   private long swigCPtr;
   protected boolean swigCMemOwn;
 
@@ -27,7 +25,7 @@ class Color_t {
     delete();
   }
 
-  synchronized void delete() {
+  public synchronized void delete() {
     if (swigCPtr != 0) {
       if (swigCMemOwn) {
         swigCMemOwn = false;
@@ -37,31 +35,31 @@ class Color_t {
     }
   }
 
-  void setR(short value) {
+  public void setR(short value) {
     ws2812JNI.Color_t_r_set(swigCPtr, this, value);
   }
 
-  short getR() {
+  public short getR() {
     return ws2812JNI.Color_t_r_get(swigCPtr, this);
   }
 
-  void setG(short value) {
+  public void setG(short value) {
     ws2812JNI.Color_t_g_set(swigCPtr, this, value);
   }
 
-  short getG() {
+  public short getG() {
     return ws2812JNI.Color_t_g_get(swigCPtr, this);
   }
 
-  void setB(short value) {
+  public void setB(short value) {
     ws2812JNI.Color_t_b_set(swigCPtr, this, value);
   }
 
-  short getB() {
+  public short getB() {
     return ws2812JNI.Color_t_b_get(swigCPtr, this);
   }
 
-  Color_t() {
+  public Color_t() {
     this(ws2812JNI.new_Color_t(), true);
   }
 

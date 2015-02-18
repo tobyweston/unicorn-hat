@@ -8,7 +8,7 @@
 
 package bad.robot.unicorn.neopixel;
 
-class SWIGTYPE_p_dma_cb_t {
+public class SWIGTYPE_p_dma_cb_t {
   private long swigCPtr;
 
   protected SWIGTYPE_p_dma_cb_t(long cPtr, boolean futureUse) {

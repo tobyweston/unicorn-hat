@@ -5,7 +5,7 @@ The library uses ws2812 as the underlying driver. It's a C library from [626Pilo
 Use [SWIG](http://www.swig.org/) to generate the JNI bindings;
 
     cd ws2812
-    swig -java -package bad.robot.unicorn.neopixel -noproxy ws2812-RPi.i
+    swig -java -package bad.robot.unicorn.neopixel ws2812-RPi.i
 
 Compile the `.o` files.
 
