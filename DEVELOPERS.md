@@ -26,3 +26,12 @@ As hinted at [here](http://docs.codehaus.org/display/MAVENUSER/Projects+With+JNI
 
 Copying the `.so` file directly into `/usr/lib` doesn't seem to work.
 
+Untested:
+
+    <systemPropertyVariables>
+        <LD_LIBRARY_PATH>${project.basedir}/ws2812/swig_example</LD_LIBRARY_PATH>
+    </systemPropertyVariables>
+
+Environment variables are OS settings available via `System.getenv()`. For example, set using `export FOO=xxx` for example.
+
+System properties are set using `-D` on the command line and are available via `System.getProperties()`. For example, `java.library.path`. They can be set at runtime using `System.setProperty`.
