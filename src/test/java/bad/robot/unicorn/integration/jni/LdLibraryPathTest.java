@@ -12,6 +12,7 @@ public class LdLibraryPathTest {
 
 	@Test
 	public void sharedObjectShouldLoad() {
+		System.loadLibrary("example");
 		String time = example.get_time();
 		System.out.println("*******************************************************");
 		System.out.println("* Current time via JNI is :    " + time);
