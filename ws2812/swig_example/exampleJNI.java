@@ -8,6 +8,9 @@
 
 
 public class exampleJNI {
+	static {
+		System.loadLibrary("example");
+	}
   public final static native void My_variable_set(double jarg1);
   public final static native double My_variable_get();
   public final static native int fact(int jarg1);
