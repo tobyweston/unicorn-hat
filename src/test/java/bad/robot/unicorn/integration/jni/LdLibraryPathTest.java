@@ -7,12 +7,17 @@ import static org.hamcrest.CoreMatchers.nullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsNot.not;
+import static org.junit.Assert.fail;
 
 public class LdLibraryPathTest {
 
 	@Test
 	public void sharedObjectShouldLoad() {
-		System.loadLibrary("example");
+		try {
+			System.loadLibrary("example");
+		} catch (UnsatisfiedLinkError e) {
+			fail("Failed to load library man!!");
+		}
 		String time = example.get_time();
 		System.out.println("*******************************************************");
 		System.out.println("* Current time via JNI is :    " + time);
