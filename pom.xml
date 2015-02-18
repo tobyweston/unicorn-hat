@@ -42,9 +42,9 @@
                         <exclude>**/*IntegrationTest.java</exclude>
                     </excludes>
                     <forkMode>once</forkMode>
-                    <argLine>-Djava.library.path=${java.library.path}:${project.basedir}/ws2812/swig_example</argLine>
+                    <argLine>-Djava.library.path=${java.library.path}:${project.basedir}/ws2812:${project.basedir}/ws2812/swig_example</argLine>
                     <environmentVariables>
-                        <LD_LIBRARY_PATH>${project.basedir}/ws2812/swig_example</LD_LIBRARY_PATH>
+                        <LD_LIBRARY_PATH>${project.basedir}/ws2812:${project.basedir}/ws2812/swig_example</LD_LIBRARY_PATH>
                     </environmentVariables>
                 </configuration>
             </plugin>
