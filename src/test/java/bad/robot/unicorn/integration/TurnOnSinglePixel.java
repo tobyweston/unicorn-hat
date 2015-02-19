@@ -6,7 +6,7 @@ import bad.robot.unicorn.neopixel.NeoPixelDisplayMatrix;
 import static java.awt.Color.BLUE;
 import static java.lang.Integer.parseInt;
 
-public class PixelIntegrationTest {
+public class TurnOnSinglePixel {
 
 	public static void main(String... args) {
 		Unicorn unicorn = new NeoPixelDisplayMatrix();
