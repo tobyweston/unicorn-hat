@@ -10,8 +10,9 @@ package bad.robot.unicorn.neopixel;
 
 class ws2812JNI {
   static {
-	System.loadLibrary("ws2812-RPi");
+	  System.loadLibrary("ws2812-RPi");
   }
+
   static native void Color_t_r_set(long jarg1, Color_t jarg1_, short jarg2);
   static native short Color_t_r_get(long jarg1, Color_t jarg1_);
   static native void Color_t_g_set(long jarg1, Color_t jarg1_, short jarg2);
