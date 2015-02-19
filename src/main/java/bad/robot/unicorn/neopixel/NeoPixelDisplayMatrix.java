@@ -4,47 +4,32 @@ import bad.robot.unicorn.Orientation;
 import bad.robot.unicorn.Unicorn;
 
 import java.awt.*;
-import java.util.stream.IntStream;
 
 import static bad.robot.unicorn.Orientation.GPIO_UP;
 import static java.util.stream.IntStream.range;
 
 public class NeoPixelDisplayMatrix implements Unicorn {
 
-    private final Integer[][] matrix = new Integer[][]{
-        {7,   6,  5,  4,  3,  2,  1,  0},
-        {8,   9, 10, 11, 12, 13, 14, 15},
-        {23, 22, 21, 20, 19, 18, 17, 16},
-        {24, 25, 26, 27, 28, 29, 30, 31},
-        {39, 38, 37, 36, 35, 34, 33, 32},
-        {40, 41, 42, 43, 44, 45, 46, 47},
-        {55, 54, 53, 52, 51, 50, 49, 48},
-        {56, 57, 58, 59, 60, 61, 62, 63}
-    };
+	private final PixelIndexMatrix indices = new PixelIndexMatrix();
 
-    private Orientation orientation = GPIO_UP;
+	private Orientation orientation = GPIO_UP;
 
 	public NeoPixelDisplayMatrix() {
 		ws2812.init(64);
 	}
 
-	public long getIndexFrom(int x, int y) {
-        if (orientation.degrees() == 90)
-            return matrix[7 - x][y];
-        if (orientation.degrees() == 180)
-            return matrix[7 - x][7 - y];
-        if (orientation.degrees() == 270)
-            return matrix[x][7 - y];
-        return matrix[x][y];
-    }
-
     @Override
     public void setPixelColor(int x, int y, Color colour) {
-        long index = getIndexFrom(x, y);
-        ws2812.setPixelColor(index, (short) colour.getRed(), (short) colour.getGreen(), (short) colour.getBlue());
+        long index = indices.getIndexFrom(x, y, orientation);
+        setPixelColor(index, colour);
     }
 
-    @Override
+	@Override
+	public void setPixelColor(long pixel, Color colour) {
+		ws2812.setPixelColor(pixel, (short) colour.getRed(), (short) colour.getGreen(), (short) colour.getBlue());
+	}
+
+	@Override
     public void rotate(Orientation orientation) {
         this.orientation = orientation;
     }

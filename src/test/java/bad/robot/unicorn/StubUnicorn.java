@@ -10,6 +10,11 @@ public class StubUnicorn implements Unicorn {
 	}
 
 	@Override
+	public void setPixelColor(long pixel, Color color) {
+
+	}
+
+	@Override
 	public void show() {
 
 	}

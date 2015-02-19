@@ -2,18 +2,16 @@ package bad.robot.unicorn.integration;
 
 import bad.robot.unicorn.Coordinate;
 import bad.robot.unicorn.SpriteSheet;
-import bad.robot.unicorn.StubUnicorn;
 import bad.robot.unicorn.Unicorn;
 import bad.robot.unicorn.neopixel.NeoPixelDisplayMatrix;
-import org.junit.Ignore;
 import org.junit.Test;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.stream.Stream;
 
+import static bad.robot.unicorn.Coordinate.coordinate;
 import static bad.robot.unicorn.Sleep.sleep;
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 import static java.util.stream.IntStream.range;
@@ -33,7 +31,7 @@ public class ShowImageIntegrationTest {
 		Unicorn unicorn = new NeoPixelDisplayMatrix();
 		BufferedImage image = images[0];
 		//        Arrays.stream(images).forEach(image -> {
-		Stream<Coordinate> _8x8 = range(0, 8).boxed().flatMap(x -> range(0, 8).mapToObj(y -> new Coordinate(x, y)));
+		Stream<Coordinate> _8x8 = range(0, 8).boxed().flatMap(x -> range(0, 8).mapToObj(y -> coordinate(x, y)));
 			_8x8.forEach(coordinate -> unicorn.setPixelColor(coordinate.x, coordinate.y, new Color(image.getRGB(coordinate.x, coordinate.y))));
 			unicorn.show();
 		sleep(500, MILLISECONDS);
