@@ -20,10 +20,13 @@ public class NeoPixelDisplayMatrix implements Unicorn {
         {56, 57, 58, 59, 60, 61, 62, 63}
     };
 
-
     private Orientation orientation = GPIO_UP;
 
-    public long getIndexFrom(int x, int y) {
+	public NeoPixelDisplayMatrix() {
+		ws2812.init(64);
+	}
+
+	public long getIndexFrom(int x, int y) {
         if (orientation.degrees() == 90)
             return matrix[7 - x][y];
         if (orientation.degrees() == 180)
