@@ -9,7 +9,7 @@ Use [SWIG](http://www.swig.org/) to generate the JNI bindings;
 
 Compile the `.o` files.
 
-    gcc -fpic -c ws2812-RPi.c ws2812-RPi_wrap.c -I/usr/lib/jvm/jdk-8-oracle-arm-vfp-hflt/include -I/usr/lib/jvm/jdk-8-oracle-arm-vfp-hflt/include/linux
+    gcc -fPIC -c ws2812-RPi.c ws2812-RPi_wrap.c -DPERI_BASE=0x3F000000 -DRPI2 -I/usr/lib/jvm/jdk-8-oracle-arm-vfp-hflt/include -I/usr/lib/jvm/jdk-8-oracle-arm-vfp-hflt/include/linux
 
 Compile the shared object.
 
