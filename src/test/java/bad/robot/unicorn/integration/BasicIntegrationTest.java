@@ -24,4 +24,8 @@ public class BasicIntegrationTest {
 		SECONDS.sleep(5);
 	}
 
+	public static void main(String... args) throws InterruptedException {
+		new BasicIntegrationTest().switchOnEachLedInSequence();
+	}
+
 }
