@@ -1,3 +1,5 @@
 target/
 *.class
 log
+.AppleDouble/
+hs_err_pid2762.log hs_err_pid2846.log hs_err_pid2979.log
