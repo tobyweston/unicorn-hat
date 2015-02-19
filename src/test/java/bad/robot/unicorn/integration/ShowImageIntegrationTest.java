@@ -25,17 +25,19 @@ import static java.util.stream.IntStream.range;
  */
 public class ShowImageIntegrationTest {
 
-    @Ignore
+    @Test
     public void displayImages() throws IOException {
         SpriteSheet sheet = new SpriteSheet(16, 18, 8, 8);
         BufferedImage[] images = sheet.subImages("/lofi.png");
 
 		Unicorn unicorn = new NeoPixelDisplayMatrix();
 		BufferedImage image = images[0];
-            Stream<Coordinate> _8x8 = range(0, 8).boxed().flatMap(x -> range(0, 8).mapToObj(y -> new Coordinate(x, y)));
+		//        Arrays.stream(images).forEach(image -> {
+		Stream<Coordinate> _8x8 = range(0, 8).boxed().flatMap(x -> range(0, 8).mapToObj(y -> new Coordinate(x, y)));
 			_8x8.forEach(coordinate -> unicorn.setPixelColor(coordinate.x, coordinate.y, new Color(image.getRGB(coordinate.x, coordinate.y))));
 			unicorn.show();
 		sleep(500, MILLISECONDS);
-    }
+		//});
+	}
 
 }

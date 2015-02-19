@@ -20,15 +20,11 @@ public class BasicIntegrationTest {
 			for (int x = 0; x < 8; x++) {
 				unicorn.setPixelColor(x, y, Color.magenta);
 				unicorn.show();
-				sleep(500, MILLISECONDS);
+				sleep(50, MILLISECONDS);
 			}
 		}
-		SECONDS.sleep(5);
-	}
-
-	@After
-	public void cleanup() {
-
+		sleep(1, SECONDS);
+		unicorn.shutdown();
 	}
 
 	public static void main(String... args) throws InterruptedException {
