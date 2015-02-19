@@ -8,25 +8,25 @@
 
 package bad.robot.unicorn.integration.jni;
 
-public class example {
-  public static void My_variable_set(double value) {
-    exampleJNI.My_variable_set(value);
-  }
+class example {
+	static void My_variable_set(double value) {
+		exampleJNI.My_variable_set(value);
+	}
 
-  public static double My_variable_get() {
-    return exampleJNI.My_variable_get();
-  }
+	static double My_variable_get() {
+		return exampleJNI.My_variable_get();
+	}
 
-  public static int fact(int n) {
-    return exampleJNI.fact(n);
-  }
+	static int fact(int n) {
+		return exampleJNI.fact(n);
+	}
 
-  public static int my_mod(int x, int y) {
-    return exampleJNI.my_mod(x, y);
-  }
+	static int my_mod(int x, int y) {
+		return exampleJNI.my_mod(x, y);
+	}
 
-  public static String get_time() {
-    return exampleJNI.get_time();
-  }
+	static String get_time() {
+		return exampleJNI.get_time();
+	}
 
 }
