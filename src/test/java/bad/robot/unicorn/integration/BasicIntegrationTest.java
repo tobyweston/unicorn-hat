@@ -1,14 +1,15 @@
 package bad.robot.unicorn.integration;
 
-import bad.robot.unicorn.StubUnicorn;
 import bad.robot.unicorn.Unicorn;
 import bad.robot.unicorn.neopixel.NeoPixelDisplayMatrix;
+import org.junit.After;
 import org.junit.Test;
 
 import java.awt.*;
 
 import static bad.robot.unicorn.Sleep.sleep;
-import static java.util.concurrent.TimeUnit.*;
+import static java.util.concurrent.TimeUnit.MILLISECONDS;
+import static java.util.concurrent.TimeUnit.SECONDS;
 
 public class BasicIntegrationTest {
 
@@ -23,6 +24,11 @@ public class BasicIntegrationTest {
 			}
 		}
 		SECONDS.sleep(5);
+	}
+
+	@After
+	public void cleanup() {
+
 	}
 
 	public static void main(String... args) throws InterruptedException {

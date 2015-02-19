@@ -4,8 +4,10 @@ import bad.robot.unicorn.Orientation;
 import bad.robot.unicorn.Unicorn;
 
 import java.awt.*;
+import java.util.stream.IntStream;
 
 import static bad.robot.unicorn.Orientation.GPIO_UP;
+import static java.util.stream.IntStream.range;
 
 public class NeoPixelDisplayMatrix implements Unicorn {
 
@@ -51,4 +53,16 @@ public class NeoPixelDisplayMatrix implements Unicorn {
     public void show() {
         ws2812.show();
     }
+
+	@Override
+	public void clear() {
+		range(0, 64).forEach(pixel -> ws2812.setPixelColor(pixel, (short) 0, (short) 0, (short) 0));
+		show();
+	}
+
+	@Override
+	public void shutdown() {
+		clear();
+		ws2812.terminate(0);
+	}
 }

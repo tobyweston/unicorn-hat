@@ -18,4 +18,14 @@ public class StubUnicorn implements Unicorn {
 	public void rotate(Orientation orientation) {
 
 	}
+
+	@Override
+	public void clear() {
+
+	}
+
+	@Override
+	public void shutdown() {
+
+	}
 }

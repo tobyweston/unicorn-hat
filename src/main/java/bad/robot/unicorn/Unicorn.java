@@ -9,4 +9,8 @@ public interface Unicorn {
     void show();
 
     void rotate(Orientation orientation);
+
+	void clear();
+
+	void shutdown();
 }
