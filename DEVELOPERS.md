@@ -9,7 +9,7 @@ Use [SWIG](http://www.swig.org/) to generate the JNI bindings;
 
 Compile the `.o` files.
 
-    gcc -fpic -c ws2812-RPi.c ws2812-RPi_wrap.c -I/usr/lib/jvm/jdk-8-oracle-arm-vfp-hflt/include -I/usr/lib/jvm/jdk-8-oracle-arm-vfp-hflt/include/linux
+    gcc -fPIC -c ws2812-RPi.c ws2812-RPi_wrap.c -DPERI_BASE=0x3F000000 -DRPI2 -I/usr/lib/jvm/jdk-8-oracle-arm-vfp-hflt/include -I/usr/lib/jvm/jdk-8-oracle-arm-vfp-hflt/include/linux
 
 Compile the shared object.
 
@@ -18,20 +18,15 @@ Compile the shared object.
 
 ## Setting LD_LIBRARY_PATH in Maven
 
-As hinted at [here](http://docs.codehaus.org/display/MAVENUSER/Projects+With+JNI), setting the following doesn't seem to work for the failsafe plugin.
+Setting the `LD_LIBRARY_PATH` in the pom means you should be able to run the hardware tests directly with `mvn failsafe:integration-tests` and blinky lights will blink on the physical HAT. **Although**, I've not figured out if running `sudo mvn` is enough for the HAT.
 
     <environmentVariables>
-        <LD_LIBRARY_PATH>ws2812</LD_LIBRARY_PATH>
+        <LD_LIBRARY_PATH>${project.basedir}/ws2812</LD_LIBRARY_PATH>
     </environmentVariables>
 
-Copying the `.so` file directly into `/usr/lib` doesn't seem to work.
+As a reminder to myself; Environment variables are OS settings available via `System.getenv()`. For example, set using `export FOO=xxx` for example. System properties are set using `-D` on the command line and are available via `System.getProperties()`. For example, `java.library.path`. They can be set at runtime using `System.setProperty`.
 
-Untested:
 
-    <systemPropertyVariables>
-        <LD_LIBRARY_PATH>${project.basedir}/ws2812/swig_example</LD_LIBRARY_PATH>
-    </systemPropertyVariables>
+Running from the shell, something like this should work.
 
-Environment variables are OS settings available via `System.getenv()`. For example, set using `export FOO=xxx` for example.
-
-System properties are set using `-D` on the command line and are available via `System.getProperties()`. For example, `java.library.path`. They can be set at runtime using `System.setProperty`.
+    sudo java -cp target/test-classes:target/classes/ -Djava.library.path=/home/pi/dev/unicorn-hat-java/ws2812 bad.robot.unicorn.integration.BasicIntegrationTest
