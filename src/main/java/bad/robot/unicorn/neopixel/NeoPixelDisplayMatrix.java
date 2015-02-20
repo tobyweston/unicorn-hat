@@ -5,14 +5,14 @@ import bad.robot.unicorn.Unicorn;
 
 import java.awt.*;
 
-import static bad.robot.unicorn.Orientation.GPIO_UP;
+import static bad.robot.unicorn.Orientation.UP;
 import static java.util.stream.IntStream.range;
 
 public class NeoPixelDisplayMatrix implements Unicorn {
 
 	private final PixelIndexMatrix indices = new PixelIndexMatrix();
 
-	private Orientation orientation = GPIO_UP;
+	private Orientation orientation = UP;
 
 	public NeoPixelDisplayMatrix() {
 		ws2812.init(64);

@@ -3,7 +3,7 @@ package bad.robot.unicorn.neopixel;
 import bad.robot.unicorn.Orientation;
 import org.junit.Test;
 
-import static bad.robot.unicorn.Orientation.GPIO_UP;
+import static bad.robot.unicorn.Orientation.UP;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
@@ -13,14 +13,14 @@ public class PixelIndexMatrixTest {
 
 	@Test(expected = RuntimeException.class)
 	public void invalidCoordinate() {
-		indices.getIndexFrom(0, 8, GPIO_UP);
+		indices.getIndexFrom(0, 8, UP);
 	}
 
 
 	@Test
 	public void noRotation() {
-		assertThat(indices.getIndexFrom(0, 0, GPIO_UP), is(7L));
-		assertThat(indices.getIndexFrom(7, 7, GPIO_UP), is(63L));
+		assertThat(indices.getIndexFrom(0, 0, UP), is(7L));
+		assertThat(indices.getIndexFrom(7, 7, UP), is(63L));
 	}
 
 	@Test

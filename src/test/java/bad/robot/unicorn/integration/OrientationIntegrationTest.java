@@ -6,7 +6,6 @@ import bad.robot.unicorn.shape.Arrow;
 import bad.robot.unicorn.shape.Shape;
 import org.junit.Test;
 
-import java.awt.*;
 import java.util.stream.Stream;
 
 import static bad.robot.unicorn.Orientation.*;
@@ -22,7 +21,7 @@ public class OrientationIntegrationTest {
 		Unicorn unicorn = new NeoPixelDisplayMatrix();
 		Shape arrow = new Arrow();
 
-		Stream.of(GPIO_UP, GPIO_RIGHT, GPIO_DOWN, GPIO_LEFT).forEach(orientation -> {
+		Stream.of(UP, GPIO_RIGHT, GPIO_DOWN, GPIO_LEFT).forEach(orientation -> {
 			unicorn.rotate(orientation);
 			arrow.draw(green, unicorn);
 			sleep(1, SECONDS);
@@ -33,7 +32,7 @@ public class OrientationIntegrationTest {
 	private void shouldShowArrowPointingUp() {
 		Unicorn unicorn = new NeoPixelDisplayMatrix();
 		Shape arrow = new Arrow();
-		unicorn.rotate(GPIO_UP);
+		unicorn.rotate(GPIO_RIGHT);
 		arrow.draw(cyan, unicorn);
 	}
 

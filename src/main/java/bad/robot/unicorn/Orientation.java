@@ -2,7 +2,7 @@ package bad.robot.unicorn;
 
 public enum Orientation {
 
-	GPIO_UP(0),
+	UP(0),
 	GPIO_RIGHT(90),
 	GPIO_DOWN(180),
 	GPIO_LEFT(270);
