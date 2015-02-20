@@ -42,6 +42,7 @@ public class OrientationIntegrationTest {
 	}
 
 	public static void main(String... args) {
+		System.out.println(GPIO_LEFT);
 		new OrientationIntegrationTest().showArrow(GPIO_LEFT);
 	}
 
