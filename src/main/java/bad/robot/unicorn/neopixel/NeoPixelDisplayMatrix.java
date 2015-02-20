@@ -24,6 +24,7 @@ public class NeoPixelDisplayMatrix implements Unicorn {
         setPixelColor(index, colour);
     }
 
+	/* doesn't respect orientation */
 	@Override
 	public void setPixelColor(long pixel, Color colour) {
 		ws2812.setPixelColor(pixel, (short) colour.getRed(), (short) colour.getGreen(), (short) colour.getBlue());

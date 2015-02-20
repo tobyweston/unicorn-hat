@@ -8,8 +8,11 @@
 
 package bad.robot.unicorn.neopixel;
 
+import static bad.robot.unicorn.neopixel.Platform.*;
+
 class ws2812JNI {
   static {
+    if (runningOnPi())
 	  System.loadLibrary("ws2812-RPi");
   }
 
