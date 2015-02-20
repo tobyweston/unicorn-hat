@@ -37,4 +37,8 @@ public class OrientationIntegrationTest {
 		sleep(1, SECONDS);
 	}
 
+	public static void main(String... args) {
+		new OrientationIntegrationTest().shouldShowArrowThenRotate();
+	}
+
 }

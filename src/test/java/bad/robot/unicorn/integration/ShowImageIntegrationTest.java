@@ -38,4 +38,8 @@ public class ShowImageIntegrationTest {
 		//});
 	}
 
+	public static void main(String... args) throws IOException {
+		new ShowImageIntegrationTest().displayImages();
+	}
+
 }
