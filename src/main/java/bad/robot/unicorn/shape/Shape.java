@@ -2,8 +2,8 @@ package bad.robot.unicorn.shape;
 
 import bad.robot.unicorn.Unicorn;
 
-import java.awt.*;
+import java.awt.Color;
 
-interface Shape {
+public interface Shape {
 	void draw(Color colour, Unicorn unicorn);
 }
