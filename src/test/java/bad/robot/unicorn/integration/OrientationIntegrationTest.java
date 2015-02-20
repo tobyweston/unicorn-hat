@@ -21,7 +21,7 @@ public class OrientationIntegrationTest {
 		Unicorn unicorn = new NeoPixelDisplayMatrix();
 		Shape arrow = new Arrow();
 
-		Stream.of(UP, GPIO_RIGHT, GPIO_DOWN, GPIO_LEFT).forEach(orientation -> {
+		Stream.of(UP, DOWN, GPIO_DOWN, GPIO_LEFT).forEach(orientation -> {
 			unicorn.rotate(orientation);
 			arrow.draw(green, unicorn);
 			sleep(1, SECONDS);
@@ -33,7 +33,7 @@ public class OrientationIntegrationTest {
 		for (int i = 0; i < 60; i++) {
 			Unicorn unicorn = new NeoPixelDisplayMatrix();
 			Shape arrow = new Arrow();
-			unicorn.rotate(GPIO_RIGHT);
+			unicorn.rotate(GPIO_DOWN);
 			arrow.draw(cyan, unicorn);
 			sleep(2, SECONDS);
 			unicorn.shutdown();

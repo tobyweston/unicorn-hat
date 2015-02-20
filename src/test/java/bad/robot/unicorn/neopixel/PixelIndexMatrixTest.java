@@ -25,8 +25,8 @@ public class PixelIndexMatrixTest {
 
 	@Test
 	public void shouldRotateNinetyDegreesClockwise() {
-		assertThat(indices.getIndexFrom(0, 0, Orientation.GPIO_RIGHT), is(56L));
-		assertThat(indices.getIndexFrom(7, 7, Orientation.GPIO_RIGHT), is(0L));
+		assertThat(indices.getIndexFrom(0, 0, Orientation.DOWN), is(56L));
+		assertThat(indices.getIndexFrom(7, 7, Orientation.DOWN), is(0L));
 	}
 
 	@Test
