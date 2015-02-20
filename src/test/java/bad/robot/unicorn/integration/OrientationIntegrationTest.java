@@ -1,5 +1,6 @@
 package bad.robot.unicorn.integration;
 
+import bad.robot.unicorn.Orientation;
 import bad.robot.unicorn.Unicorn;
 import bad.robot.unicorn.neopixel.NeoPixelDisplayMatrix;
 import bad.robot.unicorn.shape.Arrow;
@@ -29,11 +30,11 @@ public class OrientationIntegrationTest {
 		});
 	}
 
-	private void shouldShowArrowPointingUp() {
-		for (int i = 0; i < 60; i++) {
+	private void showArrow(Orientation gpioDown) {
+		for (int i = 0; i < 30; i++) {
 			Unicorn unicorn = new NeoPixelDisplayMatrix();
 			Shape arrow = new Arrow();
-			unicorn.rotate(GPIO_DOWN);
+			unicorn.rotate(gpioDown);
 			arrow.draw(cyan, unicorn);
 			sleep(2, SECONDS);
 			unicorn.shutdown();
@@ -41,7 +42,7 @@ public class OrientationIntegrationTest {
 	}
 
 	public static void main(String... args) {
-		new OrientationIntegrationTest().shouldShowArrowPointingUp();
+		new OrientationIntegrationTest().showArrow(GPIO_LEFT);
 	}
 
 }

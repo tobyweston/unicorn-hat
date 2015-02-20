@@ -1,5 +1,6 @@
 package bad.robot.unicorn.neopixel;
 
+import bad.robot.unicorn.Coordinate;
 import bad.robot.unicorn.Orientation;
 
 public class PixelIndexMatrix {
@@ -16,13 +17,8 @@ public class PixelIndexMatrix {
 	};
 
 	public long getIndexFrom(int x, int y, Orientation orientation) {
-		if (orientation.degrees() == 90)
-			return matrix[7 - x][y];
-		if (orientation.degrees() == 180)
-			return matrix[7 - x][7 - y];
-		if (orientation.degrees() == 270)
-			return matrix[x][7 - y];
-		return matrix[x][y];
+		Coordinate rotated = orientation.getCoordinateFrom(x, y);
+		return matrix[rotated.x][rotated.y];
 	}
 
 }
