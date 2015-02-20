@@ -30,10 +30,14 @@ public class OrientationIntegrationTest {
 	}
 
 	private void shouldShowArrowPointingUp() {
-		Unicorn unicorn = new NeoPixelDisplayMatrix();
-		Shape arrow = new Arrow();
-		unicorn.rotate(GPIO_RIGHT);
-		arrow.draw(cyan, unicorn);
+		for (int i = 0; i < 60; i++) {
+			Unicorn unicorn = new NeoPixelDisplayMatrix();
+			Shape arrow = new Arrow();
+			unicorn.rotate(GPIO_RIGHT);
+			arrow.draw(cyan, unicorn);
+			sleep(2, SECONDS);
+			unicorn.shutdown();
+		}
 	}
 
 	public static void main(String... args) {
