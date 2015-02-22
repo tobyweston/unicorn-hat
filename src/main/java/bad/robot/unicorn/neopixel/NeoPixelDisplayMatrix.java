@@ -31,6 +31,18 @@ public class NeoPixelDisplayMatrix implements Unicorn {
 	}
 
 	@Override
+	public void setBrightness(double brightness) {
+		if (brightness < 0 || brightness > 1)
+			throw new IllegalArgumentException("Brightness should be between 0.0 and 1.0");
+		ws2812.setBrightness(brightness);
+	}
+
+	@Override
+	public double getBrightness() {
+		return ws2812.getBrightness();
+	}
+
+	@Override
     public void rotate(Orientation orientation) {
         this.orientation = orientation;
     }

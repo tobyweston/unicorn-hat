@@ -8,6 +8,10 @@ public interface Unicorn {
 
 	void setPixelColor(long pixel, Color color);
 
+	void setBrightness(double brightness);
+
+	double getBrightness();
+
     void show();
 
     void rotate(Orientation orientation);

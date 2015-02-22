@@ -11,26 +11,30 @@ public class StubUnicorn implements Unicorn {
 
 	@Override
 	public void setPixelColor(long pixel, Color color) {
+	}
 
+	@Override
+	public void setBrightness(double brightness) {
+	}
+
+	@Override
+	public double getBrightness() {
+		return 0;
 	}
 
 	@Override
 	public void show() {
-
 	}
 
 	@Override
 	public void rotate(Orientation orientation) {
-
 	}
 
 	@Override
 	public void clear() {
-
 	}
 
 	@Override
 	public void shutdown() {
-
 	}
 }
