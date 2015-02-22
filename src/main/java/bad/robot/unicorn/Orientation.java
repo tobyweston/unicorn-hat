@@ -13,22 +13,22 @@ public enum Orientation {
 			return coordinate(x, y);
 		}
 	},
-	DOWN {
+	RIGHT {
 		@Override
 		public Coordinate getCoordinateFrom(int x, int y) {
-			return coordinate(7 - x, y);
+			return coordinate(y, 7 - x);
 		}
 	},
-	GPIO_DOWN {
+	DOWN {
 		@Override
 		public Coordinate getCoordinateFrom(int x, int y) {
 			return coordinate(7 - x, 7 - y);
 		}
 	},
-	GPIO_LEFT {
+	LEFT {
 		@Override
 		public Coordinate getCoordinateFrom(int x, int y) {
-			return coordinate(x, 7 - y);
+			return coordinate(7 - y, x);
 		}
 	};
 

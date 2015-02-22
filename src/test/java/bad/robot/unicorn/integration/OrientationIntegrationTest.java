@@ -7,6 +7,7 @@ import bad.robot.unicorn.shape.Arrow;
 import bad.robot.unicorn.shape.Shape;
 import org.junit.Test;
 
+import java.awt.*;
 import java.util.stream.Stream;
 
 import static bad.robot.unicorn.Orientation.*;
@@ -22,7 +23,7 @@ public class OrientationIntegrationTest {
 		Unicorn unicorn = new NeoPixelDisplayMatrix();
 		Shape arrow = new Arrow();
 
-		Stream.of(UP, DOWN, GPIO_DOWN, GPIO_LEFT).forEach(orientation -> {
+		Stream.of(UP, RIGHT, DOWN, LEFT).forEach(orientation -> {
 			unicorn.rotate(orientation);
 			arrow.draw(green, unicorn);
 			sleep(1, SECONDS);
@@ -30,12 +31,12 @@ public class OrientationIntegrationTest {
 		});
 	}
 
-	private void showArrow(Orientation gpioDown) {
+	private void showArrow(Orientation orientation, Color colour) {
 		for (int i = 0; i < 30; i++) {
 			Unicorn unicorn = new NeoPixelDisplayMatrix();
 			Shape arrow = new Arrow();
-			unicorn.rotate(gpioDown);
-			arrow.draw(cyan, unicorn);
+			unicorn.rotate(orientation);
+			arrow.draw(colour, unicorn);
 			sleep(2, SECONDS);
 			unicorn.shutdown();
 		}
@@ -43,13 +44,13 @@ public class OrientationIntegrationTest {
 
 	public static void main(String... args) {
 		System.out.println(UP);
-		new OrientationIntegrationTest().showArrow(UP);
-		System.out.println(GPIO_LEFT);
-		new OrientationIntegrationTest().showArrow(GPIO_LEFT);
-		System.out.println(GPIO_DOWN);
-		new OrientationIntegrationTest().showArrow(GPIO_DOWN);
+		new OrientationIntegrationTest().showArrow(UP, green);			// ok
+		System.out.println(RIGHT);
+		new OrientationIntegrationTest().showArrow(RIGHT, cyan); 	// shows as up?
 		System.out.println(DOWN);
-		new OrientationIntegrationTest().showArrow(DOWN);
+		new OrientationIntegrationTest().showArrow(DOWN, red); 	// shows as down
+		System.out.println(LEFT);
+		new OrientationIntegrationTest().showArrow(LEFT, yellow);		// down
 	}
 
 }

@@ -10,7 +10,7 @@ import static java.util.stream.IntStream.range;
 
 public class NeoPixelDisplayMatrix implements Unicorn {
 
-	private final PixelIndexMatrix indices = new PixelIndexMatrix();
+	private final PixelIndexMatrix matrix = new PixelIndexMatrix();
 
 	private Orientation orientation = UP;
 
@@ -20,7 +20,7 @@ public class NeoPixelDisplayMatrix implements Unicorn {
 
     @Override
     public void setPixelColor(int x, int y, Color colour) {
-        long index = indices.getIndexFrom(x, y, orientation);
+        long index = matrix.getIndexFrom(x, y, orientation);
         setPixelColor(index, colour);
     }
 
