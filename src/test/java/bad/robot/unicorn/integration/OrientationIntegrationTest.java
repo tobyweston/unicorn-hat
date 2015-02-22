@@ -44,13 +44,13 @@ public class OrientationIntegrationTest {
 
 	public static void main(String... args) {
 		System.out.println(UP);
-		new OrientationIntegrationTest().showArrow(UP, green);			// ok
+		new OrientationIntegrationTest().showArrow(UP, green);
 		System.out.println(RIGHT);
-		new OrientationIntegrationTest().showArrow(RIGHT, cyan); 	// shows as up?
+		new OrientationIntegrationTest().showArrow(RIGHT, cyan);
 		System.out.println(DOWN);
-		new OrientationIntegrationTest().showArrow(DOWN, red); 	// shows as down
+		new OrientationIntegrationTest().showArrow(DOWN, red);
 		System.out.println(LEFT);
-		new OrientationIntegrationTest().showArrow(LEFT, yellow);		// down
+		new OrientationIntegrationTest().showArrow(LEFT, yellow);
 	}
 
 }
