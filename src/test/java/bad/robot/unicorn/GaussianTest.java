@@ -2,33 +2,32 @@ package bad.robot.unicorn;
 
 import org.junit.Test;
 
-import java.util.Arrays;
-
+import static java.lang.String.format;
+import static java.util.stream.IntStream.range;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.core.Is.is;
+import static org.hamcrest.Matchers.closeTo;
 
 public class GaussianTest {
 
-    @Test
-    public void shouldCreateMatrix() {
-        float[][] expected = new float[][] {
-            {0, 0, 0, 0, 0, 0, 0, 0},
-            {0, 0, 0, 0, 0, 0, 0, 0},
-            {0, 0, 0, 0, 0, 0, 0, 0},
-            {0, 0, 0, 0, 0, 0, 0, 0},
-            {0, 0, 0, 0, 0, 0, 0, 0},
-            {0, 0, 0, 0, 0, 0, 0, 0},
-            {0, 0, 0, 0, 0, 0, 0, 0},
-            {0, 0, 0, 0, 0, 0, 0, 0}
-        };
+	@Test
+	public void shouldCreateMatrix() {
+		double[][] expected = new double[][]{
+			{9.91383530e-119, 7.85454954e-090, 1.44890865e-070, 6.22301528e-061, 6.22301528e-061, 1.44890865e-070, 7.85454954e-090, 9.91383530e-119},
+			{7.85454954e-090, 6.22301528e-061, 1.14794370e-041, 4.93038066e-032, 4.93038066e-032, 1.14794370e-041, 6.22301528e-061, 7.85454954e-090},
+			{1.44890865e-070, 1.14794370e-041, 2.11758237e-022, 9.09494702e-013, 9.09494702e-013, 2.11758237e-022, 1.14794370e-041, 1.44890865e-070},
+			{6.22301528e-061, 4.93038066e-032, 9.09494702e-013, 3.90625000e-003, 3.90625000e-003, 9.09494702e-013, 4.93038066e-032, 6.22301528e-061},
+			{6.22301528e-061, 4.93038066e-032, 9.09494702e-013, 3.90625000e-003, 3.90625000e-003, 9.09494702e-013, 4.93038066e-032, 6.22301528e-061},
+			{1.44890865e-070, 1.14794370e-041, 2.11758237e-022, 9.09494702e-013, 9.09494702e-013, 2.11758237e-022, 1.14794370e-041, 1.44890865e-070},
+			{7.85454954e-090, 6.22301528e-061, 1.14794370e-041, 4.93038066e-032, 4.93038066e-032, 1.14794370e-041, 6.22301528e-061, 7.85454954e-090},
+			{9.91383530e-119, 7.85454954e-090, 1.44890865e-070, 6.22301528e-061, 6.22301528e-061, 1.44890865e-070, 7.85454954e-090, 9.91383530e-119},
+		};
 
-        float[][] gauss = Gaussian.create(0.5, 3.5, 3.5);
+		double[][] gauss = Gaussian.create(0.5, 3.5, 3.5);
 
-        assertThat(gauss.length, is(8));
-        assertThat(gauss[0].length, is(8));
-
-        for (float[] g : gauss)
-            System.out.println(Arrays.toString(g));
-    }
-
+		range(0, 8).forEach(x -> {
+			range(0, 8).forEach(y -> {
+				assertThat(format("position %s, %s", x, y), gauss[x][y], closeTo(expected[x][y], 0.000000001));
+			});
+		});
+	}
 }
