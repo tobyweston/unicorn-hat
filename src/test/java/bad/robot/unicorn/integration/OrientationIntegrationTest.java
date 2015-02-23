@@ -32,7 +32,7 @@ public class OrientationIntegrationTest {
 	}
 
 	private void showArrow(Orientation orientation, Color colour) {
-		for (int i = 0; i < 30; i++) {
+		for (int i = 0; i < 5; i++) {
 			Unicorn unicorn = new NeoPixelDisplayMatrix();
 			Shape arrow = new Arrow();
 			unicorn.rotate(orientation);

@@ -36,6 +36,9 @@ public class RainbowBlinkyIntegrationTest {
             unicorn.show();
             Sleep.sleep(5, MILLISECONDS);
         });
-
     }
+
+	public static void main(String... args) {
+		new RainbowBlinkyIntegrationTest().showColoursOfTheRainbowAndBlink();
+	}
 }
