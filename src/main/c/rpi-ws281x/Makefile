@@ -15,4 +15,5 @@ build:
 	gcc -pthread -shared -Wl,-O1 -Wl,-Bsymbolic-functions -Wl,-z,relro rpi_ws281x_wrap.o -Llib/ -lws2811 -o libws281x.so
 
 clean:
+	cd lib && make clean
 	sudo rm -rf build
