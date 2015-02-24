@@ -27,6 +27,5 @@ setup(name              = 'rpi_ws281x',
       py_modules        = ['neopixel'],
       ext_modules       = [Extension('_rpi_ws281x', 
                                      sources=['rpi_ws281x_wrap.c'],
-                                     include_dirs=['/usr/lib/jvm/jdk-8-oracle-arm-vfp-hflt/include'],
-                                     library_dirs=['/usr/lib/jvm/jdk-8-oracle-arm-vfp-hflt/include/linux'],
+                                     include_dirs=['/usr/lib/jvm/jdk-8-oracle-arm-vfp-hflt/include', '/usr/lib/jvm/jdk-8-oracle-arm-vfp-hflt/include/linux'],
                                      libraries=['ws2811'])])
