@@ -60,7 +60,7 @@
                     <forkMode>once</forkMode>
                     <argLine>-Djava.library.path=${java.library.path}:${project.basedir}/src/main/c/ws2812</argLine>
                     <environmentVariables>
-                        <LD_LIBRARY_PATH>${project.basedir}/ws2812</LD_LIBRARY_PATH>
+                        <LD_LIBRARY_PATH>${project.basedir}/src/main/c/ws2812</LD_LIBRARY_PATH>
                     </environmentVariables>
                 </configuration>
             </plugin>

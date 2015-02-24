@@ -24,10 +24,10 @@ or do it via the `src/main/c/ws2812/lib/Makefile` (which will also build the Pi 
 
 ## Setting LD_LIBRARY_PATH in Maven
 
-Setting the `LD_LIBRARY_PATH` in the pom means you should be able to run the hardware tests directly with `mvn failsafe:integration-tests` and blinky lights will blink on the physical HAT. **Although**, I've not figured out if running `sudo mvn` is enough for the HAT.
+Setting the `LD_LIBRARY_PATH` in the pom means you should be able to run the hardware tests directly with `mvn failsafe:integration-tests` and blinky lights will blink on the physical HAT. You need to run `sudo mvn` though.
 
     <environmentVariables>
-        <LD_LIBRARY_PATH>${project.basedir}/ws2812</LD_LIBRARY_PATH>
+        <LD_LIBRARY_PATH>${project.basedir}/src/main/c/ws2812</LD_LIBRARY_PATH>
     </environmentVariables>
 
 As a reminder to myself; Environment variables are OS settings available via `System.getenv()`. For example, set using `export FOO=xxx` for example. System properties are set using `-D` on the command line and are available via `System.getProperties()`. For example, `java.library.path`. They can be set at runtime using `System.setProperty`.
@@ -35,4 +35,8 @@ As a reminder to myself; Environment variables are OS settings available via `Sy
 
 Running from the shell, something like this should work.
 
-    sudo java -cp target/test-classes:target/classes/ -Djava.library.path=/home/pi/dev/unicorn-hat-java/ws2812 bad.robot.unicorn.integration.BasicIntegrationTest
+    sudo java -cp target/test-classes:target/classes/ -Djava.library.path=/home/pi/dev/unicorn-hat-java/src/main/c/ws2812 bad.robot.unicorn.integration.BasicIntegrationTest
+
+If you see an error like this,
+
+    Exception in thread "main" java.lang.UnsatisfiedLinkError: no ws2812-RPi in java.library.path
