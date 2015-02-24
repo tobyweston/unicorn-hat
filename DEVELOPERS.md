@@ -1,3 +1,24 @@
+#
+
+## Raspberry Pi rpi-ws281x Library
+
+A fix for the Pi 2 came from xxx
+
+Follow these steps to build it.
+
+Optionally, build the underlying library.
+
+    cd src/main/c/rpi-ws281x/lib
+    make lib
+
+That will create `.o` and `.a` files in the `lib` folder. Then use the `Makefile` one level up to compile the Java wrapper and create the `.so` file (this actually calls into the `lib/Makefile` so that's why the previous step is optional).
+
+    cd src/main/c/rpi-ws281x/
+    make build
+
+The `setup.py` tries to do the same thing but is a bit python specific for me.
+
+
 ## Raspberry Pi ws2812 Library
 
 The library uses ws2812 as the underlying driver. It's a C library from [626Pilot/RaspberryPi-NeoPixel-WS2812](https://github.com/626Pilot/RaspberryPi-NeoPixel-WS2812), although I've taken the modified version from [pimoroni/unicorn-hat](https://github.com/pimoroni/unicorn-hat)
