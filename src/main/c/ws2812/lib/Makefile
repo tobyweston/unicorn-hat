@@ -11,6 +11,7 @@ endif
 
 all:
 	gcc -fPIC -c ws2812-RPi.c -DPERI_BASE=$(PERI_BASE) $(RPI2)
+
 	ar rc libws2812-RPi.a ws2812-RPi.o
 	ranlib libws2812-RPi.a
 
