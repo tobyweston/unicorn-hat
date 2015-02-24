@@ -2,9 +2,9 @@
 
 The library uses ws2812 as the underlying driver. It's a C library from [626Pilot/RaspberryPi-NeoPixel-WS2812](https://github.com/626Pilot/RaspberryPi-NeoPixel-WS2812), although I've taken the modified version from [pimoroni/unicorn-hat](https://github.com/pimoroni/unicorn-hat)
 
-Use [SWIG](http://www.swig.org/) to generate the JNI bindings;
+Use [SWIG](http://www.swig.org/) to generate the JNI bindings (manually targeting the Pi 2 only);
 
-    cd ws2812
+    cd src/main/c/ws2812/lib
     swig -java -package bad.robot.unicorn.neopixel ws2812-RPi.i
 
 Compile the `.o` files.
@@ -14,6 +14,12 @@ Compile the `.o` files.
 Compile the shared object.
 
     gcc -shared ws2812-RPi.o ws2812-RPi_wrap.o -o libws2812-RPi.so
+
+or do it via the `src/main/c/ws2812/lib/Makefile` (which will also build the Pi B+ version rather than the just the Pi 2 version).
+
+    cd src/main/c/ws2812/lib
+    make swig_prep
+    make shared
 
 
 ## Setting LD_LIBRARY_PATH in Maven

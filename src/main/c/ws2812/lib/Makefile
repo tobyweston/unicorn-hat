@@ -20,7 +20,7 @@ all:
 
 shared:
 	gcc -fPIC -c ws2812-RPi.c ../ws2812-RPi_wrap.c -DPERI_BASE=$(PERI_BASE) $(RPI2) -I/usr/lib/jvm/jdk-8-oracle-arm-vfp-hflt/include -I/usr/lib/jvm/jdk-8-oracle-arm-vfp-hflt/include/linux
-	gcc -shared ws2812-RPi.o ../ws2812-RPi_wrap.o -o libws2812-RPi.so
+	gcc -shared ws2812-RPi.o ws2812-RPi_wrap.o -o ../libws2812-RPi.so
 
 clean:
 	-rm *.o
