@@ -38,10 +38,10 @@ public class RainbowIntegrationTest {
             range(0, 8).forEach(y -> {
                 range(0, 8).forEach(x -> {
                     float xy = x + y / 4;
-                    float r = toFloat((cos((x + i) / 2.0) + cos((y + i) / 2.0)) * 64 + 128);
-                    float g = toFloat((sin((x + i) / 1.5) + sin((y + i) / 2.0)) * 64 + 128);
-                    float b = toFloat((sin((x + i) / 2.0) + cos((y + i) / 1.5)) * 64 + 128);
-                    unicorn.setPixelColor(x, y, new Color(r, g, b));
+					float r = toFloat((cos((x + i) / 2.0) + cos((y + i) / 2.0)));
+					float g = toFloat((sin((x + i) / 1.5) + sin((y + i) / 2.0)));
+					float b = toFloat((sin((x + i) / 2.0) + cos((y + i) / 1.5)));
+					unicorn.setPixelColor(x, y, new Color(r, g, b));
                 });
             });
             unicorn.show();
