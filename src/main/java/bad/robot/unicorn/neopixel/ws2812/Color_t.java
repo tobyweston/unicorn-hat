@@ -6,7 +6,7 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
-package bad.robot.unicorn.neopixel;
+package bad.robot.unicorn.neopixel.ws2812;
 
 class Color_t {
   private long swigCPtr;

@@ -1,7 +1,7 @@
 package bad.robot.unicorn.integration;
 
 import bad.robot.unicorn.Unicorn;
-import bad.robot.unicorn.neopixel.NeoPixelDisplayMatrix;
+import bad.robot.unicorn.neopixel.ws2812.Ws2812Unicorn;
 
 import static java.awt.Color.BLUE;
 import static java.lang.Integer.parseInt;
@@ -9,7 +9,7 @@ import static java.lang.Integer.parseInt;
 public class TurnOnSinglePixel {
 
 	public static void main(String... args) {
-		Unicorn unicorn = new NeoPixelDisplayMatrix();
+		Unicorn unicorn = new Ws2812Unicorn();
 		if (args.length == 0)
 			unicorn.clear();
 		if (args.length > 2)

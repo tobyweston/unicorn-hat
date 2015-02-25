@@ -1,20 +1,22 @@
-package bad.robot.unicorn.neopixel;
+package bad.robot.unicorn.neopixel.ws2812;
 
 import bad.robot.unicorn.Orientation;
 import bad.robot.unicorn.Unicorn;
+import bad.robot.unicorn.neopixel.PixelIndexMatrix;
+import bad.robot.unicorn.neopixel.ws2812.ws2812;
 
 import java.awt.*;
 
 import static bad.robot.unicorn.Orientation.UP;
 import static java.util.stream.IntStream.range;
 
-public class NeoPixelDisplayMatrix implements Unicorn {
+public class Ws2812Unicorn implements Unicorn {
 
 	private final PixelIndexMatrix matrix = new PixelIndexMatrix();
 
 	private Orientation orientation = UP;
 
-	public NeoPixelDisplayMatrix() {
+	public Ws2812Unicorn() {
 		ws2812.init(64);
 	}
 

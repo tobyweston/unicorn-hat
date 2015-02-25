@@ -6,12 +6,11 @@
  * the SWIG interface file instead.
  * ----------------------------------------------------------------------------- */
 
-package bad.robot.unicorn.neopixel;
+package bad.robot.unicorn.neopixel.ws2812;
 
 import static bad.robot.unicorn.neopixel.Platform.runningOnPi;
 
-class ws2812 {
-
+public class ws2812 {
 	static void init(int numPixels) {
 		if (runningOnPi())
 			ws2812JNI.init(numPixels);
@@ -149,5 +148,4 @@ class ws2812 {
 	static void terminate(int dummy) {
 		ws2812JNI.terminate(dummy);
 	}
-
 }

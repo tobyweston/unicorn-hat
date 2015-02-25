@@ -1,8 +1,7 @@
 package bad.robot.unicorn.integration;
 
 import bad.robot.unicorn.Unicorn;
-import bad.robot.unicorn.neopixel.NeoPixelDisplayMatrix;
-import org.junit.After;
+import bad.robot.unicorn.neopixel.ws2812.Ws2812Unicorn;
 import org.junit.Test;
 
 import java.awt.*;
@@ -15,7 +14,7 @@ public class BasicIntegrationTest {
 
 	@Test
 	public void switchOnEachLedInSequence() throws InterruptedException {
-		Unicorn unicorn = new NeoPixelDisplayMatrix();
+		Unicorn unicorn = new Ws2812Unicorn();
 		for (int y = 0; y < 8; y++) {
 			for (int x = 0; x < 8; x++) {
 				unicorn.setPixelColor(x, y, Color.magenta);

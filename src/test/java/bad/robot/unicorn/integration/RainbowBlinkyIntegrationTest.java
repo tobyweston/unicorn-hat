@@ -3,7 +3,7 @@ package bad.robot.unicorn.integration;
 import bad.robot.unicorn.Gaussian;
 import bad.robot.unicorn.Sleep;
 import bad.robot.unicorn.Unicorn;
-import bad.robot.unicorn.neopixel.NeoPixelDisplayMatrix;
+import bad.robot.unicorn.neopixel.ws2812.Ws2812Unicorn;
 import org.junit.Test;
 
 import java.awt.*;
@@ -17,7 +17,7 @@ public class RainbowBlinkyIntegrationTest {
 
     @Test
     public void showColoursOfTheRainbowAndBlink() {
-        Unicorn unicorn = new NeoPixelDisplayMatrix();
+        Unicorn unicorn = new Ws2812Unicorn();
 
         List<Integer> zs = Arrays.asList(9, 8, 7, 6, 5, 4, 3, 2, 1, 1, 2, 3, 4, 5, 6, 7, 8, 9);
         zs.stream().forEach(z -> {

@@ -2,7 +2,7 @@ package bad.robot.unicorn.integration;
 
 import bad.robot.unicorn.Sleep;
 import bad.robot.unicorn.Unicorn;
-import bad.robot.unicorn.neopixel.NeoPixelDisplayMatrix;
+import bad.robot.unicorn.neopixel.ws2812.Ws2812Unicorn;
 import org.junit.Test;
 
 import java.awt.*;
@@ -16,7 +16,7 @@ public class RainbowIntegrationTest {
 
 	@Test
 	public void shouldShowTheColoursOfTheRainbow() {
-		Unicorn unicorn = new NeoPixelDisplayMatrix();
+		Unicorn unicorn = new Ws2812Unicorn();
 		range(0, 360).forEach(z -> {
 			range(0, 8).forEach(y -> {
 				range(0, 8).forEach(x -> {
@@ -33,7 +33,7 @@ public class RainbowIntegrationTest {
 
     @Test
     public void shouldShowColoursOfTheRainbowSwirling() {
-        Unicorn unicorn = new NeoPixelDisplayMatrix();
+        Unicorn unicorn = new Ws2812Unicorn();
         iterate(0, i -> i + 0.3).limit(100).forEach(i -> {
             range(0, 8).forEach(y -> {
                 range(0, 8).forEach(x -> {

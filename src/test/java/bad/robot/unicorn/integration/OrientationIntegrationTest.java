@@ -2,7 +2,7 @@ package bad.robot.unicorn.integration;
 
 import bad.robot.unicorn.Orientation;
 import bad.robot.unicorn.Unicorn;
-import bad.robot.unicorn.neopixel.NeoPixelDisplayMatrix;
+import bad.robot.unicorn.neopixel.ws2812.Ws2812Unicorn;
 import bad.robot.unicorn.shape.Arrow;
 import bad.robot.unicorn.shape.Shape;
 import org.junit.Test;
@@ -20,7 +20,7 @@ public class OrientationIntegrationTest {
 
 	@Test
 	public void shouldShowArrowThenRotate() {
-		Unicorn unicorn = new NeoPixelDisplayMatrix();
+		Unicorn unicorn = new Ws2812Unicorn();
 		Shape arrow = new Arrow();
 
 		Stream.of(UP, RIGHT, DOWN, LEFT).forEach(orientation -> {
@@ -33,7 +33,7 @@ public class OrientationIntegrationTest {
 
 	private void showArrow(Orientation orientation, Color colour) {
 		for (int i = 0; i < 5; i++) {
-			Unicorn unicorn = new NeoPixelDisplayMatrix();
+			Unicorn unicorn = new Ws2812Unicorn();
 			Shape arrow = new Arrow();
 			unicorn.rotate(orientation);
 			arrow.draw(colour, unicorn);

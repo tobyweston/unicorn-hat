@@ -3,7 +3,7 @@ package bad.robot.unicorn.integration;
 import bad.robot.unicorn.Coordinate;
 import bad.robot.unicorn.SpriteSheet;
 import bad.robot.unicorn.Unicorn;
-import bad.robot.unicorn.neopixel.NeoPixelDisplayMatrix;
+import bad.robot.unicorn.neopixel.ws2812.Ws2812Unicorn;
 import org.junit.Test;
 
 import java.awt.*;
@@ -29,7 +29,7 @@ public class ShowImageIntegrationTest {
 		SpriteSheet sheet = new SpriteSheet(16, 18, 8, 8);
 		BufferedImage[] images = sheet.subImages("/lofi.png");
 
-		Unicorn unicorn = new NeoPixelDisplayMatrix();
+		Unicorn unicorn = new Ws2812Unicorn();
 		Arrays.stream(images).forEach(image -> {
 			Stream<Coordinate> _8x8 = range(0, 8).boxed().flatMap(x -> range(0, 8).mapToObj(y -> coordinate(x, y)));
 			_8x8.forEach(coordinate -> unicorn.setPixelColor(coordinate.x, coordinate.y, new Color(image.getRGB(coordinate.x, coordinate.y))));
