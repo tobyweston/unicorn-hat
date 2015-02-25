@@ -1,7 +1,7 @@
 all: clean build
 
 swig_prep:
-	swig -java -package bad.robot.unicorn.neopixel rpi_ws281x.i
+	swig -java -package bad.robot.unicorn.neopixel.ws2811 rpi_ws281x.i
 
 install:
 	sudo ./setup.py install

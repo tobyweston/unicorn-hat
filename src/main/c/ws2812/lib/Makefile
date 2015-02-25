@@ -10,7 +10,7 @@ else
 endif
 
 swig_prep:
-	swig -java -package bad.robot.unicorn.neopixel ../ws2812-RPi.i
+	swig -java -package bad.robot.unicorn.neopixel.ws2812 ../ws2812-RPi.i
 
 all:
 	gcc -fPIC -c ws2812-RPi.c ../ws2812-RPi_wrap.c -DPERI_BASE=$(PERI_BASE) $(RPI2) -I/usr/lib/jvm/jdk-8-oracle-arm-vfp-hflt/include -I/usr/lib/jvm/jdk-8-oracle-arm-vfp-hflt/include/linux
