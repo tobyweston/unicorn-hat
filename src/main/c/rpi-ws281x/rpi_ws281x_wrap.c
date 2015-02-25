@@ -225,7 +225,7 @@ static void SWIGUNUSED SWIG_JavaThrowException(JNIEnv *jenv, SWIG_JavaExceptionC
 extern "C" {
 #endif
 
-SWIGEXPORT jint JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_WS2811_1TARGET_1FREQ_1get(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jint JNICALL Java_bad_robot_unicorn_neopixel_ws2811_rpi_1ws281xJNI_WS2811_1TARGET_1FREQ_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   int result;
   
@@ -237,7 +237,7 @@ SWIGEXPORT jint JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_WS2811_1T
 }
 
 
-SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1channel_1t_1gpionum_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2811_rpi_1ws281xJNI_ws2811_1channel_1t_1gpionum_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ws2811_channel_t *arg1 = (ws2811_channel_t *) 0 ;
   int arg2 ;
   
@@ -250,7 +250,7 @@ SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1c
 }
 
 
-SWIGEXPORT jint JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1channel_1t_1gpionum_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_bad_robot_unicorn_neopixel_ws2811_rpi_1ws281xJNI_ws2811_1channel_1t_1gpionum_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   ws2811_channel_t *arg1 = (ws2811_channel_t *) 0 ;
   int result;
@@ -265,7 +265,7 @@ SWIGEXPORT jint JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1c
 }
 
 
-SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1channel_1t_1invert_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2811_rpi_1ws281xJNI_ws2811_1channel_1t_1invert_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ws2811_channel_t *arg1 = (ws2811_channel_t *) 0 ;
   int arg2 ;
   
@@ -278,7 +278,7 @@ SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1c
 }
 
 
-SWIGEXPORT jint JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1channel_1t_1invert_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_bad_robot_unicorn_neopixel_ws2811_rpi_1ws281xJNI_ws2811_1channel_1t_1invert_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   ws2811_channel_t *arg1 = (ws2811_channel_t *) 0 ;
   int result;
@@ -293,7 +293,7 @@ SWIGEXPORT jint JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1c
 }
 
 
-SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1channel_1t_1count_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2811_rpi_1ws281xJNI_ws2811_1channel_1t_1count_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ws2811_channel_t *arg1 = (ws2811_channel_t *) 0 ;
   int arg2 ;
   
@@ -306,7 +306,7 @@ SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1c
 }
 
 
-SWIGEXPORT jint JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1channel_1t_1count_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_bad_robot_unicorn_neopixel_ws2811_rpi_1ws281xJNI_ws2811_1channel_1t_1count_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   ws2811_channel_t *arg1 = (ws2811_channel_t *) 0 ;
   int result;
@@ -321,7 +321,7 @@ SWIGEXPORT jint JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1c
 }
 
 
-SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1channel_1t_1brightness_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2811_rpi_1ws281xJNI_ws2811_1channel_1t_1brightness_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ws2811_channel_t *arg1 = (ws2811_channel_t *) 0 ;
   int arg2 ;
   
@@ -334,7 +334,7 @@ SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1c
 }
 
 
-SWIGEXPORT jint JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1channel_1t_1brightness_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_bad_robot_unicorn_neopixel_ws2811_rpi_1ws281xJNI_ws2811_1channel_1t_1brightness_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   ws2811_channel_t *arg1 = (ws2811_channel_t *) 0 ;
   int result;
@@ -349,7 +349,7 @@ SWIGEXPORT jint JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1c
 }
 
 
-SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1channel_1t_1leds_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2811_rpi_1ws281xJNI_ws2811_1channel_1t_1leds_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   ws2811_channel_t *arg1 = (ws2811_channel_t *) 0 ;
   ws2811_led_t *arg2 = (ws2811_led_t *) 0 ;
   
@@ -362,7 +362,7 @@ SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1c
 }
 
 
-SWIGEXPORT jlong JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1channel_1t_1leds_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_bad_robot_unicorn_neopixel_ws2811_rpi_1ws281xJNI_ws2811_1channel_1t_1leds_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   ws2811_channel_t *arg1 = (ws2811_channel_t *) 0 ;
   ws2811_led_t *result = 0 ;
@@ -377,7 +377,7 @@ SWIGEXPORT jlong JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1
 }
 
 
-SWIGEXPORT jlong JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_new_1ws2811_1channel_1t(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_bad_robot_unicorn_neopixel_ws2811_rpi_1ws281xJNI_new_1ws2811_1channel_1t(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   ws2811_channel_t *result = 0 ;
   
@@ -389,7 +389,7 @@ SWIGEXPORT jlong JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_new_1ws2
 }
 
 
-SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_delete_1ws2811_1channel_1t(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2811_rpi_1ws281xJNI_delete_1ws2811_1channel_1t(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   ws2811_channel_t *arg1 = (ws2811_channel_t *) 0 ;
   
   (void)jenv;
@@ -399,7 +399,7 @@ SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_delete_1w
 }
 
 
-SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1t_1device_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2811_rpi_1ws281xJNI_ws2811_1t_1device_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   ws2811_t *arg1 = (ws2811_t *) 0 ;
   struct ws2811_device *arg2 = (struct ws2811_device *) 0 ;
   
@@ -412,7 +412,7 @@ SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1t
 }
 
 
-SWIGEXPORT jlong JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1t_1device_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_bad_robot_unicorn_neopixel_ws2811_rpi_1ws281xJNI_ws2811_1t_1device_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   ws2811_t *arg1 = (ws2811_t *) 0 ;
   struct ws2811_device *result = 0 ;
@@ -427,7 +427,7 @@ SWIGEXPORT jlong JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1
 }
 
 
-SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1t_1freq_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2811_rpi_1ws281xJNI_ws2811_1t_1freq_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   ws2811_t *arg1 = (ws2811_t *) 0 ;
   uint32_t arg2 ;
   
@@ -440,7 +440,7 @@ SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1t
 }
 
 
-SWIGEXPORT jlong JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1t_1freq_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_bad_robot_unicorn_neopixel_ws2811_rpi_1ws281xJNI_ws2811_1t_1freq_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   ws2811_t *arg1 = (ws2811_t *) 0 ;
   uint32_t result;
@@ -455,7 +455,7 @@ SWIGEXPORT jlong JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1
 }
 
 
-SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1t_1dmanum_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2811_rpi_1ws281xJNI_ws2811_1t_1dmanum_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   ws2811_t *arg1 = (ws2811_t *) 0 ;
   int arg2 ;
   
@@ -468,7 +468,7 @@ SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1t
 }
 
 
-SWIGEXPORT jint JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1t_1dmanum_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_bad_robot_unicorn_neopixel_ws2811_rpi_1ws281xJNI_ws2811_1t_1dmanum_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   ws2811_t *arg1 = (ws2811_t *) 0 ;
   int result;
@@ -483,7 +483,7 @@ SWIGEXPORT jint JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1t
 }
 
 
-SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1t_1channel_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2811_rpi_1ws281xJNI_ws2811_1t_1channel_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2, jobject jarg2_) {
   ws2811_t *arg1 = (ws2811_t *) 0 ;
   ws2811_channel_t *arg2 ;
   
@@ -502,7 +502,7 @@ SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1t
 }
 
 
-SWIGEXPORT jlong JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1t_1channel_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_bad_robot_unicorn_neopixel_ws2811_rpi_1ws281xJNI_ws2811_1t_1channel_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   ws2811_t *arg1 = (ws2811_t *) 0 ;
   ws2811_channel_t *result = 0 ;
@@ -517,7 +517,7 @@ SWIGEXPORT jlong JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1
 }
 
 
-SWIGEXPORT jlong JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_new_1ws2811_1t(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_bad_robot_unicorn_neopixel_ws2811_rpi_1ws281xJNI_new_1ws2811_1t(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   ws2811_t *result = 0 ;
   
@@ -529,7 +529,7 @@ SWIGEXPORT jlong JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_new_1ws2
 }
 
 
-SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_delete_1ws2811_1t(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2811_rpi_1ws281xJNI_delete_1ws2811_1t(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   ws2811_t *arg1 = (ws2811_t *) 0 ;
   
   (void)jenv;
@@ -539,7 +539,7 @@ SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_delete_1w
 }
 
 
-SWIGEXPORT jint JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1init(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_bad_robot_unicorn_neopixel_ws2811_rpi_1ws281xJNI_ws2811_1init(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   ws2811_t *arg1 = (ws2811_t *) 0 ;
   int result;
@@ -554,7 +554,7 @@ SWIGEXPORT jint JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1i
 }
 
 
-SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1fini(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2811_rpi_1ws281xJNI_ws2811_1fini(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   ws2811_t *arg1 = (ws2811_t *) 0 ;
   
   (void)jenv;
@@ -565,7 +565,7 @@ SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1f
 }
 
 
-SWIGEXPORT jint JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1render(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_bad_robot_unicorn_neopixel_ws2811_rpi_1ws281xJNI_ws2811_1render(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   ws2811_t *arg1 = (ws2811_t *) 0 ;
   int result;
@@ -580,7 +580,7 @@ SWIGEXPORT jint JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1r
 }
 
 
-SWIGEXPORT jint JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1wait(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jint JNICALL Java_bad_robot_unicorn_neopixel_ws2811_rpi_1ws281xJNI_ws2811_1wait(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jint jresult = 0 ;
   ws2811_t *arg1 = (ws2811_t *) 0 ;
   int result;
@@ -595,7 +595,7 @@ SWIGEXPORT jint JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1w
 }
 
 
-SWIGEXPORT jlong JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1led_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT jlong JNICALL Java_bad_robot_unicorn_neopixel_ws2811_rpi_1ws281xJNI_ws2811_1led_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   jlong jresult = 0 ;
   ws2811_channel_t *arg1 = (ws2811_channel_t *) 0 ;
   int arg2 ;
@@ -612,7 +612,7 @@ SWIGEXPORT jlong JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1
 }
 
 
-SWIGEXPORT jint JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1led_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3) {
+SWIGEXPORT jint JNICALL Java_bad_robot_unicorn_neopixel_ws2811_rpi_1ws281xJNI_ws2811_1led_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2, jlong jarg3) {
   jint jresult = 0 ;
   ws2811_channel_t *arg1 = (ws2811_channel_t *) 0 ;
   int arg2 ;
@@ -631,7 +631,7 @@ SWIGEXPORT jint JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1l
 }
 
 
-SWIGEXPORT jlong JNICALL Java_bad_robot_unicorn_neopixel_rpi_1ws281xJNI_ws2811_1channel_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT jlong JNICALL Java_bad_robot_unicorn_neopixel_ws2811_rpi_1ws281xJNI_ws2811_1channel_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
   jlong jresult = 0 ;
   ws2811_t *arg1 = (ws2811_t *) 0 ;
   int arg2 ;
