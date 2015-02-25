@@ -34,7 +34,7 @@ public class RainbowIntegrationTest {
     @Test
     public void shouldShowColoursOfTheRainbowSwirling() {
         Unicorn unicorn = new Ws2812Unicorn();
-        iterate(0, i -> i + 0.3).limit(100).forEach(i -> {
+        iterate(0, i -> i + 0.3).limit(1000).forEach(i -> {
             range(0, 8).forEach(y -> {
                 range(0, 8).forEach(x -> {
                     float xy = x + y / 4;
