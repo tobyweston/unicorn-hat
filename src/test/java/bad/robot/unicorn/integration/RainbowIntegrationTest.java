@@ -32,37 +32,35 @@ public class RainbowIntegrationTest {
 		});
 	}
 
-    @Test
-    public void shouldShowColoursOfTheRainbowSwirling() {
+	@Test
+	public void shouldShowColoursOfTheRainbowSwirling() {
 		iterate(0, i -> i + 0.3).limit(500).forEach(i -> {
-            range(0, 8).forEach(y -> {
-                range(0, 8).forEach(x -> {
-					float r = toFloat((cos((x + i) / 2.0) + cos((y + i) / 2.0)));
-					float g = toFloat((sin((x + i) / 1.5) + sin((y + i) / 2.0)));
-					float b = toFloat((sin((x + i) / 2.0) + cos((y + i) / 1.5)));
-					int rgb = Color.HSBtoRGB(r, g, b);
-					unicorn.setPixelColor(x, y, new Color(rgb));
-                });
-            });
-            unicorn.show();
-            Sleep.sleep(10, MILLISECONDS);
-        });
-    }
+			range(0, 8).forEach(y -> {
+				range(0, 8).forEach(x -> {
+					int r = roundToValueRGBValue((cos((x + i) / 2.0) + cos((y + i) / 2.0)) * 64 + 128);
+					int g = roundToValueRGBValue((sin((x + i) / 1.5) + sin((y + i) / 2.0)) * 64 + 128);
+					int b = roundToValueRGBValue((sin((x + i) / 2.0) + cos((y + i) / 1.5)) * 64 + 128);
+					unicorn.setPixelColor(x, y, new Color(r, g, b));
+				});
+			});
+			unicorn.show();
+			Sleep.sleep(10, MILLISECONDS);
+		});
+	}
 
 	@After
 	public void cleanup() {
 		unicorn.shutdown();
 	}
 
-    private static float toFloat(Double value) {
-        int offset = 30;
-        float asFloat = value.floatValue();
-        return max(0, min(255, asFloat + offset));
-    }
+	private static int roundToValueRGBValue(Double value) {
+		int offset = 30;
+		return (int) max(0, min(255, value + offset));
+	}
 
-    public static void main(String... args) {
+	public static void main(String... args) {
 		RainbowIntegrationTest test = new RainbowIntegrationTest();
 		test.shouldShowColoursOfTheRainbowSwirling();
 		test.cleanup();
-    }
+	}
 }
