@@ -3,6 +3,7 @@ package bad.robot.unicorn.integration;
 import bad.robot.unicorn.Sleep;
 import bad.robot.unicorn.Unicorn;
 import bad.robot.unicorn.neopixel.ws2812.Ws2812Unicorn;
+import org.junit.After;
 import org.junit.Test;
 
 import java.awt.*;
@@ -14,9 +15,10 @@ import static java.util.stream.IntStream.range;
 
 public class RainbowIntegrationTest {
 
+	private final Unicorn unicorn = new Ws2812Unicorn();
+
 	@Test
 	public void shouldShowTheColoursOfTheRainbow() {
-		Unicorn unicorn = new Ws2812Unicorn();
 		range(0, 360).forEach(z -> {
 			range(0, 8).forEach(y -> {
 				range(0, 8).forEach(x -> {
@@ -28,27 +30,29 @@ public class RainbowIntegrationTest {
 				Sleep.sleep(1, MILLISECONDS);
 			});
 		});
-		unicorn.shutdown();
 	}
 
     @Test
     public void shouldShowColoursOfTheRainbowSwirling() {
-        Unicorn unicorn = new Ws2812Unicorn();
-        iterate(0, i -> i + 0.3).limit(1000).forEach(i -> {
+		iterate(0, i -> i + 0.3).limit(500).forEach(i -> {
             range(0, 8).forEach(y -> {
                 range(0, 8).forEach(x -> {
-                    float xy = x + y / 4;
 					float r = toFloat((cos((x + i) / 2.0) + cos((y + i) / 2.0)));
 					float g = toFloat((sin((x + i) / 1.5) + sin((y + i) / 2.0)));
 					float b = toFloat((sin((x + i) / 2.0) + cos((y + i) / 1.5)));
-					unicorn.setPixelColor(x, y, new Color(r, g, b));
+					int rgb = Color.HSBtoRGB(r, g, b);
+					unicorn.setPixelColor(x, y, new Color(rgb));
                 });
             });
             unicorn.show();
             Sleep.sleep(10, MILLISECONDS);
         });
-        unicorn.shutdown();
     }
+
+	@After
+	public void cleanup() {
+		unicorn.shutdown();
+	}
 
     private static float toFloat(Double value) {
         int offset = 30;
@@ -57,6 +61,8 @@ public class RainbowIntegrationTest {
     }
 
     public static void main(String... args) {
-        new RainbowIntegrationTest().shouldShowColoursOfTheRainbowSwirling();
+		RainbowIntegrationTest test = new RainbowIntegrationTest();
+		test.shouldShowColoursOfTheRainbowSwirling();
+		test.cleanup();
     }
 }
