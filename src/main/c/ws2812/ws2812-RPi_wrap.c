@@ -194,7 +194,7 @@ static void SWIGUNUSED SWIG_JavaThrowException(JNIEnv *jenv, SWIG_JavaExceptionC
 extern "C" {
 #endif
 
-SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_Color_1t_1r_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jshort jarg2) {
+SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812_ws2812JNI_Color_1t_1r_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jshort jarg2) {
   Color_t *arg1 = (Color_t *) 0 ;
   unsigned char arg2 ;
   
@@ -207,7 +207,7 @@ SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_Color_1t_1r_1s
 }
 
 
-SWIGEXPORT jshort JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_Color_1t_1r_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jshort JNICALL Java_bad_robot_unicorn_neopixel_ws2812_ws2812JNI_Color_1t_1r_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jshort jresult = 0 ;
   Color_t *arg1 = (Color_t *) 0 ;
   unsigned char result;
@@ -222,7 +222,7 @@ SWIGEXPORT jshort JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_Color_1t_1r_
 }
 
 
-SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_Color_1t_1g_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jshort jarg2) {
+SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812_ws2812JNI_Color_1t_1g_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jshort jarg2) {
   Color_t *arg1 = (Color_t *) 0 ;
   unsigned char arg2 ;
   
@@ -235,7 +235,7 @@ SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_Color_1t_1g_1s
 }
 
 
-SWIGEXPORT jshort JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_Color_1t_1g_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jshort JNICALL Java_bad_robot_unicorn_neopixel_ws2812_ws2812JNI_Color_1t_1g_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jshort jresult = 0 ;
   Color_t *arg1 = (Color_t *) 0 ;
   unsigned char result;
@@ -250,7 +250,7 @@ SWIGEXPORT jshort JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_Color_1t_1g_
 }
 
 
-SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_Color_1t_1b_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jshort jarg2) {
+SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812_ws2812JNI_Color_1t_1b_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jshort jarg2) {
   Color_t *arg1 = (Color_t *) 0 ;
   unsigned char arg2 ;
   
@@ -263,7 +263,7 @@ SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_Color_1t_1b_1s
 }
 
 
-SWIGEXPORT jshort JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_Color_1t_1b_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jshort JNICALL Java_bad_robot_unicorn_neopixel_ws2812_ws2812JNI_Color_1t_1b_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jshort jresult = 0 ;
   Color_t *arg1 = (Color_t *) 0 ;
   unsigned char result;
@@ -278,7 +278,7 @@ SWIGEXPORT jshort JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_Color_1t_1b_
 }
 
 
-SWIGEXPORT jlong JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_new_1Color_1t(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_bad_robot_unicorn_neopixel_ws2812_ws2812JNI_new_1Color_1t(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   Color_t *result = 0 ;
   
@@ -290,7 +290,7 @@ SWIGEXPORT jlong JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_new_1Color_1t
 }
 
 
-SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_delete_1Color_1t(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812_ws2812JNI_delete_1Color_1t(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   Color_t *arg1 = (Color_t *) 0 ;
   
   (void)jenv;
@@ -300,7 +300,7 @@ SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_delete_1Color_
 }
 
 
-SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_init(JNIEnv *jenv, jclass jcls, jint jarg1) {
+SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812_ws2812JNI_init(JNIEnv *jenv, jclass jcls, jint jarg1) {
   int arg1 ;
   
   (void)jenv;
@@ -310,21 +310,21 @@ SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_init(JNIEnv *j
 }
 
 
-SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_clear(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812_ws2812JNI_clear(JNIEnv *jenv, jclass jcls) {
   (void)jenv;
   (void)jcls;
   clear();
 }
 
 
-SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_show(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812_ws2812JNI_show(JNIEnv *jenv, jclass jcls) {
   (void)jenv;
   (void)jcls;
   show();
 }
 
 
-SWIGEXPORT jlong JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_Wheel(JNIEnv *jenv, jclass jcls, jshort jarg1) {
+SWIGEXPORT jlong JNICALL Java_bad_robot_unicorn_neopixel_ws2812_ws2812JNI_Wheel(JNIEnv *jenv, jclass jcls, jshort jarg1) {
   jlong jresult = 0 ;
   uint8_t arg1 ;
   Color_t result;
@@ -342,7 +342,7 @@ SWIGEXPORT jlong JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_Wheel(JNIEnv 
 }
 
 
-SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_colorWipe(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jshort jarg2) {
+SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812_ws2812JNI_colorWipe(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jshort jarg2) {
   Color_t arg1 ;
   uint8_t arg2 ;
   Color_t *argp1 ;
@@ -361,7 +361,7 @@ SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_colorWipe(JNIE
 }
 
 
-SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_rainbow(JNIEnv *jenv, jclass jcls, jshort jarg1) {
+SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812_ws2812JNI_rainbow(JNIEnv *jenv, jclass jcls, jshort jarg1) {
   uint8_t arg1 ;
   
   (void)jenv;
@@ -371,7 +371,7 @@ SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_rainbow(JNIEnv
 }
 
 
-SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_rainbowCycle(JNIEnv *jenv, jclass jcls, jshort jarg1) {
+SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812_ws2812JNI_rainbowCycle(JNIEnv *jenv, jclass jcls, jshort jarg1) {
   uint8_t arg1 ;
   
   (void)jenv;
@@ -381,7 +381,7 @@ SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_rainbowCycle(J
 }
 
 
-SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_theaterChase(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jshort jarg2) {
+SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812_ws2812JNI_theaterChase(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jshort jarg2) {
   Color_t arg1 ;
   uint8_t arg2 ;
   Color_t *argp1 ;
@@ -400,7 +400,7 @@ SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_theaterChase(J
 }
 
 
-SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_theaterChaseRainbow(JNIEnv *jenv, jclass jcls, jshort jarg1) {
+SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812_ws2812JNI_theaterChaseRainbow(JNIEnv *jenv, jclass jcls, jshort jarg1) {
   uint8_t arg1 ;
   
   (void)jenv;
@@ -410,7 +410,7 @@ SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_theaterChaseRa
 }
 
 
-SWIGEXPORT jshort JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_setBrightness(JNIEnv *jenv, jclass jcls, jdouble jarg1) {
+SWIGEXPORT jshort JNICALL Java_bad_robot_unicorn_neopixel_ws2812_ws2812JNI_setBrightness(JNIEnv *jenv, jclass jcls, jdouble jarg1) {
   jshort jresult = 0 ;
   double arg1 ;
   unsigned char result;
@@ -424,7 +424,7 @@ SWIGEXPORT jshort JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_setBrightnes
 }
 
 
-SWIGEXPORT jdouble JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_getBrightness(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jdouble JNICALL Java_bad_robot_unicorn_neopixel_ws2812_ws2812JNI_getBrightness(JNIEnv *jenv, jclass jcls) {
   jdouble jresult = 0 ;
   double result;
   
@@ -436,7 +436,7 @@ SWIGEXPORT jdouble JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_getBrightne
 }
 
 
-SWIGEXPORT jlong JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_RGB2Color(JNIEnv *jenv, jclass jcls, jshort jarg1, jshort jarg2, jshort jarg3) {
+SWIGEXPORT jlong JNICALL Java_bad_robot_unicorn_neopixel_ws2812_ws2812JNI_RGB2Color(JNIEnv *jenv, jclass jcls, jshort jarg1, jshort jarg2, jshort jarg3) {
   jlong jresult = 0 ;
   unsigned char arg1 ;
   unsigned char arg2 ;
@@ -458,7 +458,7 @@ SWIGEXPORT jlong JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_RGB2Color(JNI
 }
 
 
-SWIGEXPORT jlong JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_Color(JNIEnv *jenv, jclass jcls, jshort jarg1, jshort jarg2, jshort jarg3) {
+SWIGEXPORT jlong JNICALL Java_bad_robot_unicorn_neopixel_ws2812_ws2812JNI_Color(JNIEnv *jenv, jclass jcls, jshort jarg1, jshort jarg2, jshort jarg3) {
   jlong jresult = 0 ;
   unsigned char arg1 ;
   unsigned char arg2 ;
@@ -480,7 +480,7 @@ SWIGEXPORT jlong JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_Color(JNIEnv 
 }
 
 
-SWIGEXPORT jshort JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_setPixelColor(JNIEnv *jenv, jclass jcls, jlong jarg1, jshort jarg2, jshort jarg3, jshort jarg4) {
+SWIGEXPORT jshort JNICALL Java_bad_robot_unicorn_neopixel_ws2812_ws2812JNI_setPixelColor(JNIEnv *jenv, jclass jcls, jlong jarg1, jshort jarg2, jshort jarg3, jshort jarg4) {
   jshort jresult = 0 ;
   unsigned int arg1 ;
   unsigned char arg2 ;
@@ -500,7 +500,7 @@ SWIGEXPORT jshort JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_setPixelColo
 }
 
 
-SWIGEXPORT jshort JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_setPixelColorT(JNIEnv *jenv, jclass jcls, jlong jarg1, jlong jarg2, jobject jarg2_) {
+SWIGEXPORT jshort JNICALL Java_bad_robot_unicorn_neopixel_ws2812_ws2812JNI_setPixelColorT(JNIEnv *jenv, jclass jcls, jlong jarg1, jlong jarg2, jobject jarg2_) {
   jshort jresult = 0 ;
   unsigned int arg1 ;
   Color_t arg2 ;
@@ -523,7 +523,7 @@ SWIGEXPORT jshort JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_setPixelColo
 }
 
 
-SWIGEXPORT jlong JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_getPixelColor(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT jlong JNICALL Java_bad_robot_unicorn_neopixel_ws2812_ws2812JNI_getPixelColor(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   jlong jresult = 0 ;
   unsigned int arg1 ;
   Color_t result;
@@ -541,7 +541,7 @@ SWIGEXPORT jlong JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_getPixelColor
 }
 
 
-SWIGEXPORT jlong JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_numPixels(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_bad_robot_unicorn_neopixel_ws2812_ws2812JNI_numPixels(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   unsigned int result;
   
@@ -553,7 +553,7 @@ SWIGEXPORT jlong JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_numPixels(JNI
 }
 
 
-SWIGEXPORT jlong JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_getPixels(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT jlong JNICALL Java_bad_robot_unicorn_neopixel_ws2812_ws2812JNI_getPixels(JNIEnv *jenv, jclass jcls) {
   jlong jresult = 0 ;
   Color_t *result = 0 ;
   
@@ -565,7 +565,7 @@ SWIGEXPORT jlong JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_getPixels(JNI
 }
 
 
-SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_setPWMBit(JNIEnv *jenv, jclass jcls, jlong jarg1, jshort jarg2) {
+SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812_ws2812JNI_setPWMBit(JNIEnv *jenv, jclass jcls, jlong jarg1, jshort jarg2) {
   unsigned int arg1 ;
   unsigned char arg2 ;
   
@@ -577,7 +577,7 @@ SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_setPWMBit(JNIE
 }
 
 
-SWIGEXPORT jshort JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_getPWMBit(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT jshort JNICALL Java_bad_robot_unicorn_neopixel_ws2812_ws2812JNI_getPWMBit(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   jshort jresult = 0 ;
   unsigned int arg1 ;
   unsigned char result;
@@ -591,28 +591,28 @@ SWIGEXPORT jshort JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_getPWMBit(JN
 }
 
 
-SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_dumpLEDBuffer(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812_ws2812JNI_dumpLEDBuffer(JNIEnv *jenv, jclass jcls) {
   (void)jenv;
   (void)jcls;
   dumpLEDBuffer();
 }
 
 
-SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_dumpPWMBuffer(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812_ws2812JNI_dumpPWMBuffer(JNIEnv *jenv, jclass jcls) {
   (void)jenv;
   (void)jcls;
   dumpPWMBuffer();
 }
 
 
-SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_dumpPWMStatus(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812_ws2812JNI_dumpPWMStatus(JNIEnv *jenv, jclass jcls) {
   (void)jenv;
   (void)jcls;
   dumpPWMStatus();
 }
 
 
-SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_dumpPWMControl(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812_ws2812JNI_dumpPWMControl(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   unsigned int arg1 ;
   
   (void)jenv;
@@ -622,28 +622,28 @@ SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_dumpPWMControl
 }
 
 
-SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_dumpPWMDMAC(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812_ws2812JNI_dumpPWMDMAC(JNIEnv *jenv, jclass jcls) {
   (void)jenv;
   (void)jcls;
   dumpPWMDMAC();
 }
 
 
-SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_dumpPWM(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812_ws2812JNI_dumpPWM(JNIEnv *jenv, jclass jcls) {
   (void)jenv;
   (void)jcls;
   dumpPWM();
 }
 
 
-SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_dumpDMARegs(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812_ws2812JNI_dumpDMARegs(JNIEnv *jenv, jclass jcls) {
   (void)jenv;
   (void)jcls;
   dumpDMARegs();
 }
 
 
-SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_dumpControlBlock(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812_ws2812JNI_dumpControlBlock(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   dma_cb_t *arg1 = (dma_cb_t *) 0 ;
   
   (void)jenv;
@@ -653,7 +653,7 @@ SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_dumpControlBlo
 }
 
 
-SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_dumpTransferInformation(JNIEnv *jenv, jclass jcls, jlong jarg1) {
+SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812_ws2812JNI_dumpTransferInformation(JNIEnv *jenv, jclass jcls, jlong jarg1) {
   unsigned int arg1 ;
   
   (void)jenv;
@@ -663,14 +663,14 @@ SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_dumpTransferIn
 }
 
 
-SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_dumpDMA(JNIEnv *jenv, jclass jcls) {
+SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812_ws2812JNI_dumpDMA(JNIEnv *jenv, jclass jcls) {
   (void)jenv;
   (void)jcls;
   dumpDMA();
 }
 
 
-SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812JNI_terminate(JNIEnv *jenv, jclass jcls, jint jarg1) {
+SWIGEXPORT void JNICALL Java_bad_robot_unicorn_neopixel_ws2812_ws2812JNI_terminate(JNIEnv *jenv, jclass jcls, jint jarg1) {
   int arg1 ;
   
   (void)jenv;
