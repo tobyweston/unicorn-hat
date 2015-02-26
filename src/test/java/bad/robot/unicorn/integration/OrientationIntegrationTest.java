@@ -6,12 +6,12 @@ import bad.robot.unicorn.shape.Arrow;
 import bad.robot.unicorn.shape.Shape;
 import org.junit.Test;
 
+import java.awt.*;
 import java.util.stream.Stream;
 
 import static bad.robot.unicorn.Orientation.*;
 import static bad.robot.unicorn.Sleep.sleep;
 import static bad.robot.unicorn.integration.CommandLine.createUnicorn;
-import static java.awt.Color.green;
 import static java.util.concurrent.TimeUnit.SECONDS;
 
 public class OrientationIntegrationTest {
@@ -25,7 +25,7 @@ public class OrientationIntegrationTest {
         Shape arrow = new Arrow();
         Stream.of(UP, RIGHT, DOWN, LEFT).forEach(orientation -> {
             unicorn.rotate(orientation);
-            arrow.draw(green, unicorn);
+            arrow.draw(new Color(0, 255, 0), unicorn);
             sleep(1, SECONDS);
             unicorn.clear();
         });
