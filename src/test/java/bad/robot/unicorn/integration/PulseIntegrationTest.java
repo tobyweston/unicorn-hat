@@ -28,7 +28,7 @@ public class PulseIntegrationTest {
             double radius = 5 / z;
             double[][] gauss = Gaussian.create(radius, 3.5, 3.5);
 
-            range(0, 10).forEach(count -> {
+            range(0, 100).forEach(count -> {
                 range(0, 8).forEach(y -> {
                     range(0, 8).forEach(x -> {
                         float hue = 0.8f;
