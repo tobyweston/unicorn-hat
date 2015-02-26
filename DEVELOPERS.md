@@ -1,12 +1,15 @@
-#
+# Compiling the C Libraries
 
 ## Raspberry Pi rpi-ws281x Library
 
-A fix for the Pi 2 came from xxx
+A fix for the Pi 2 came from [richardghirst/rpi_ws281x](https://github.com/richardghirst/rpi_ws281x). This project uses it (and another C library, see below) to drive the LEDs. You need to compile the C on the Pi and generate the shared objects (`.so`).
+
+If you need to, use [SWIG](http://www.swig.org/) to generate the JNI bindings;
+
+    cd src/main/c/rpi-ws281x/
+    swig -java -package bad.robot.unicorn.neopixel.ws2811 rpi_ws281x.i
 
 Follow these steps to build it.
-
-Optionally, build the underlying library.
 
     cd src/main/c/rpi-ws281x/lib
     make lib
@@ -16,7 +19,7 @@ That will create `.o` and `.a` files in the `lib` folder. Then use the `Makefile
     cd src/main/c/rpi-ws281x/
     make build
 
-The `setup.py` tries to do the same thing but is a bit python specific for me.
+Look for the generated `.so` file and remove any `.o` files.
 
 
 ## Raspberry Pi ws2812 Library
@@ -26,7 +29,7 @@ The library uses ws2812 as the underlying driver. It's a C library from [626Pilo
 Use [SWIG](http://www.swig.org/) to generate the JNI bindings (manually targeting the Pi 2 only);
 
     cd src/main/c/ws2812/lib
-    swig -java -package bad.robot.unicorn.neopixel ws2812-RPi.i
+    swig -java -package bad.robot.unicorn.neopixel.ws2812 ws2812-RPi.i
 
 Compile the `.o` files.
 
@@ -36,14 +39,14 @@ Compile the shared object.
 
     gcc -shared ws2812-RPi.o ws2812-RPi_wrap.o -o libws2812-RPi.so
 
-or do it via the `src/main/c/ws2812/lib/Makefile` (which will also build the Pi B+ version rather than the just the Pi 2 version).
+or do it all via the `src/main/c/ws2812/lib/Makefile` (which will also build the Pi B+ version rather than the just the Pi 2 version).
 
     cd src/main/c/ws2812/lib
     make swig_prep
     make shared
 
 
-## Setting LD_LIBRARY_PATH in Maven
+# Setting LD_LIBRARY_PATH in Maven
 
 Setting the `LD_LIBRARY_PATH` in the pom means you should be able to run the hardware tests directly with `mvn failsafe:integration-tests` and blinky lights will blink on the physical HAT. You need to run `sudo mvn` though.
 
