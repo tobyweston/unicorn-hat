@@ -29,10 +29,10 @@ public class DemoIntegrationTest {
 				range(0, 8).forEach(y -> {
 					range(0, 8).forEach(x -> {
 						RawColour colour = effect.getColourFor(x, y, step);
-						double red = Math.max(0, Math.min(255, colour.red));
-						double green = Math.max(0, Math.min(255, colour.green));
-						double blue = Math.max(0, Math.min(255, colour.blue));
-						unicorn.setPixelColor(x, y, new Color(Color.HSBtoRGB((float) red, (float) green, (float) blue)));
+						int red = (int) Math.max(0, Math.min(255, colour.red));
+						int green = (int) Math.max(0, Math.min(255, colour.green));
+						int blue = (int) Math.max(0, Math.min(255, colour.blue));
+						unicorn.setPixelColor(x, y, new Color(red, green, blue));
 					});
 				});
 				// step
