@@ -1,13 +1,46 @@
 package bad.robot.unicorn.integration;
 
+import bad.robot.unicorn.Sleep;
+import bad.robot.unicorn.Unicorn;
+import bad.robot.unicorn.neopixel.ws2811.Ws2811Unicorn;
 import org.junit.Test;
+
+import java.awt.*;
+import java.util.concurrent.TimeUnit;
+import java.util.stream.IntStream;
+
+import static java.util.concurrent.TimeUnit.MILLISECONDS;
+import static java.util.stream.IntStream.range;
 
 public class DemoIntegrationTest {
 
     @Test
     public void swirlyGoodness() {
-
+		swirlyGoodness(new Ws2811Unicorn());
     }
+
+    private void swirlyGoodness(Unicorn unicorn) {
+		Swirl effect = new Swirl();
+		unicorn.setBrightness(0.05);
+
+		while (true) {
+			range(0, 500).forEach(step -> {
+				range(0, 8).forEach(y -> {
+					range(0, 8).forEach(x -> {
+						RawColour colour = effect.getColourFor(x, y, step);
+						int red = (int) Math.max(0, Math.min(255, colour.red));
+						int green =  (int) Math.max(0, Math.min(255, colour.green));
+						int blue =  (int) Math.max(0, Math.min(255, colour.blue));
+						unicorn.setPixelColor(x, y, new Color(red, green, blue));
+					});
+				});
+				// step
+				unicorn.show();
+				Sleep.sleep(10, MILLISECONDS);
+			});
+			// rotate effect
+		}
+	}
 
     interface Effect {
         RawColour getColourFor(int x, int y, int step);
