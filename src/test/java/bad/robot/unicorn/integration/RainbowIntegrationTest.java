@@ -3,13 +3,11 @@ package bad.robot.unicorn.integration;
 import bad.robot.unicorn.Sleep;
 import bad.robot.unicorn.Unicorn;
 import bad.robot.unicorn.neopixel.ws2811.Ws2811Unicorn;
-import bad.robot.unicorn.neopixel.ws2812.Ws2812Unicorn;
-import org.junit.After;
 import org.junit.Test;
 
 import java.awt.*;
 
-import static bad.robot.unicorn.integration.CommandLine.*;
+import static bad.robot.unicorn.integration.CommandLine.createUnicorn;
 import static java.lang.Math.*;
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 import static java.util.stream.DoubleStream.iterate;
@@ -64,8 +62,6 @@ public class RainbowIntegrationTest {
 	}
 
 	public static void main(String... args) {
-		RainbowIntegrationTest test = new RainbowIntegrationTest();
-        test.shouldShowSimpleColoursOfTheRainbow(createUnicorn(args));
-        test.shouldShowFancyColoursOfTheRainbow(createUnicorn(args));
+		new RainbowIntegrationTest().shouldShowFancyColoursOfTheRainbow(createUnicorn(args));
 	}
 }
