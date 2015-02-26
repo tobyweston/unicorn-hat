@@ -3,7 +3,7 @@ package bad.robot.unicorn.integration;
 import bad.robot.unicorn.Coordinate;
 import bad.robot.unicorn.SpriteSheet;
 import bad.robot.unicorn.Unicorn;
-import bad.robot.unicorn.neopixel.ws2812.Ws2812Unicorn;
+import bad.robot.unicorn.neopixel.ws2811.Ws2811Unicorn;
 import org.junit.Test;
 
 import java.awt.*;
@@ -14,6 +14,7 @@ import java.util.stream.Stream;
 
 import static bad.robot.unicorn.Coordinate.coordinate;
 import static bad.robot.unicorn.Sleep.sleep;
+import static bad.robot.unicorn.integration.CommandLine.createUnicorn;
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 import static java.util.stream.IntStream.range;
 
@@ -26,20 +27,22 @@ public class ShowImageIntegrationTest {
 
 	@Test
 	public void displayImages() throws IOException {
-		SpriteSheet sheet = new SpriteSheet(16, 18, 8, 8);
-		BufferedImage[] images = sheet.subImages("/lofi.png");
-
-		Unicorn unicorn = new Ws2812Unicorn();
-		Arrays.stream(images).forEach(image -> {
-			Stream<Coordinate> _8x8 = range(0, 8).boxed().flatMap(x -> range(0, 8).mapToObj(y -> coordinate(x, y)));
-			_8x8.forEach(coordinate -> unicorn.setPixelColor(coordinate.x, coordinate.y, new Color(image.getRGB(coordinate.x, coordinate.y))));
-			unicorn.show();
-			sleep(500, MILLISECONDS);
-		});
+        displayImages(new Ws2811Unicorn());
 	}
 
-	public static void main(String... args) throws IOException {
-		new ShowImageIntegrationTest().displayImages();
+    private void displayImages(Unicorn unicorn) throws IOException {
+        SpriteSheet sheet = new SpriteSheet(16, 18, 8, 8);
+        BufferedImage[] images = sheet.subImages("/lofi.png");
+        Arrays.stream(images).forEach(image -> {
+            Stream<Coordinate> _8x8 = range(0, 8).boxed().flatMap(x -> range(0, 8).mapToObj(y -> coordinate(x, y)));
+            _8x8.forEach(coordinate -> unicorn.setPixelColor(coordinate.x, coordinate.y, new Color(image.getRGB(coordinate.x, coordinate.y))));
+            unicorn.show();
+            sleep(500, MILLISECONDS);
+        });
+    }
+
+    public static void main(String... args) throws IOException {
+		new ShowImageIntegrationTest().displayImages(createUnicorn(args));
 	}
 
 }

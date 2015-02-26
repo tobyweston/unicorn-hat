@@ -3,6 +3,7 @@ package bad.robot.unicorn.integration;
 import bad.robot.unicorn.Gaussian;
 import bad.robot.unicorn.Sleep;
 import bad.robot.unicorn.Unicorn;
+import bad.robot.unicorn.neopixel.ws2811.Ws2811Unicorn;
 import bad.robot.unicorn.neopixel.ws2812.Ws2812Unicorn;
 import org.junit.Test;
 
@@ -10,6 +11,7 @@ import java.awt.*;
 import java.util.Arrays;
 import java.util.List;
 
+import static bad.robot.unicorn.integration.CommandLine.*;
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 import static java.util.stream.IntStream.range;
 
@@ -17,8 +19,10 @@ public class RainbowBlinkyIntegrationTest {
 
     @Test
     public void showColoursOfTheRainbowAndBlink() {
-        Unicorn unicorn = new Ws2812Unicorn();
+        showColoursOfTheRainbowAndBlink(new Ws2811Unicorn());
+    }
 
+    private void showColoursOfTheRainbowAndBlink(Unicorn unicorn) {
         List<Integer> zs = Arrays.asList(9, 8, 7, 6, 5, 4, 3, 2, 1, 1, 2, 3, 4, 5, 6, 7, 8, 9);
         zs.stream().forEach(z -> {
             double radius = 5 / z;
@@ -36,9 +40,10 @@ public class RainbowBlinkyIntegrationTest {
             unicorn.show();
             Sleep.sleep(5, MILLISECONDS);
         });
+        unicorn.shutdown();
     }
 
-	public static void main(String... args) {
-		new RainbowBlinkyIntegrationTest().showColoursOfTheRainbowAndBlink();
-	}
+    public static void main(String... args) {
+        new RainbowBlinkyIntegrationTest().showColoursOfTheRainbowAndBlink(createUnicorn(args));
+    }
 }
