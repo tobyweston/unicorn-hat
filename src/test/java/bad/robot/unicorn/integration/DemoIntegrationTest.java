@@ -9,6 +9,7 @@ import java.awt.*;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.IntStream;
 
+import static bad.robot.unicorn.integration.CommandLine.createUnicorn;
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 import static java.util.stream.IntStream.range;
 
@@ -40,6 +41,10 @@ public class DemoIntegrationTest {
 			});
 			// rotate effect
 		}
+	}
+
+	public static void main(String... args) {
+		new DemoIntegrationTest().swirlyGoodness(createUnicorn(args));
 	}
 
     interface Effect {
