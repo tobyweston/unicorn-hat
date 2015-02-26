@@ -16,7 +16,7 @@ public class AdafruitNeoPixel {
 	 * @param brightness Set to 0 for darkest and 255 for brightest
 	 * @param channel the PWM channel to use
 	 */
-	public AdafruitNeoPixel(int count, int pin, int freqHz, int dma, boolean invert, int brightness, int channel) {
+	AdafruitNeoPixel(int count, int pin, int freqHz, int dma, boolean invert, int brightness, int channel) {
         this.channel = rpi_ws281x.ws2811_channel_get(leds, channel);
         initialiseChannels();
         initialiseCurrentChannel(count, pin, invert, brightness);
@@ -29,26 +29,26 @@ public class AdafruitNeoPixel {
 			throw new RuntimeException("ws2811_init failed with code " + result);
 	}
 
-	public void setBrightness(double brightness) {
+	void setBrightness(double brightness) {
 		channel.setBrightness((int) (brightness * 255.0));
 	}
 
-	public void setPixelColor(int pixel, short red, short green, short blue) {
+	void setPixelColor(int pixel, short red, short green, short blue) {
 		long colour = (red << 16) | (green << 8) | blue;
 		rpi_ws281x.ws2811_led_set(channel, pixel, colour);
 	}
 
-	public void show() {
+	void show() {
 		int result = rpi_ws281x.ws2811_render(leds);
 		if (result != 0)
 			throw new RuntimeException("ws2811_render failed with code " + result);
 	}
 
-	public double getBrightness() {
+	double getBrightness() {
 		return channel.getBrightness();
 	}
 
-	public void cleanup() {
+	void cleanup() {
 		rpi_ws281x.ws2811_fini(leds);
 		leds.delete();
 	}
