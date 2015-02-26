@@ -19,6 +19,7 @@ public class BasicIntegrationTest {
 	}
 
     private void switchOnEachLedInSequence(Unicorn unicorn) {
+		unicorn.setBrightness(0.02);
         for (int y = 0; y < 8; y++) {
             for (int x = 0; x < 8; x++) {
                 unicorn.setPixelColor(x, y, new Color(255, 0, 255));
