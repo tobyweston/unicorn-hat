@@ -4,8 +4,8 @@ import static java.util.stream.IntStream.range;
 
 public class AdafruitNeoPixel {
 
-	private ws2811_t leds = new ws2811_t();
-	private ws2811_channel_t channel;
+	private final ws2811_t leds = new ws2811_t();
+	private final ws2811_channel_t channel;
 
 	/**
 	 * @param count number of LED pixels
@@ -17,8 +17,9 @@ public class AdafruitNeoPixel {
 	 * @param channel the PWM channel to use
 	 */
 	public AdafruitNeoPixel(int count, int pin, int freqHz, int dma, boolean invert, int brightness, int channel) {
-		initialiseChannels();
-		initialiseCurrentChannel(count, pin, invert, brightness, channel);
+        this.channel = rpi_ws281x.ws2811_channel_get(leds, channel);
+        initialiseChannels();
+        initialiseCurrentChannel(count, pin, invert, brightness);
 		initialiseController(freqHz, dma);
 	}
 
@@ -67,8 +68,7 @@ public class AdafruitNeoPixel {
 		});
 	}
 
-	private void initialiseCurrentChannel(int count, int pin, boolean invert, int brightness, int channel) {
-		this.channel = rpi_ws281x.ws2811_channel_get(leds, channel);
+	private void initialiseCurrentChannel(int count, int pin, boolean invert, int brightness) {
 		this.channel.setCount(count);
 		this.channel.setGpionum(pin);
 		this.channel.setInvert(invert ? 1 : 0);	 // 0 if not invert else 1
