@@ -63,6 +63,6 @@ public class Ws2811Unicorn implements Unicorn {
 	@Override
 	public void shutdown() {
 		clear();
-		show();
+        adafruit.cleanup();
 	}
 }
