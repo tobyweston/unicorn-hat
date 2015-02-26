@@ -27,6 +27,13 @@ public class BasicIntegrationTest {
             }
         }
         sleep(1, SECONDS);
+		for (int y = 0; y < 8; y++) {
+			for (int x = 0; x < 8; x++) {
+				unicorn.setPixelColor(x, y, new Color(0, 0, 0));
+				unicorn.show();
+				sleep(50, MILLISECONDS);
+			}
+		}
         unicorn.shutdown();
     }
 
