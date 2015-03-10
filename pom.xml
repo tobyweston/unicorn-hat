@@ -6,12 +6,20 @@
 
     <groupId>bad.robot</groupId>
     <artifactId>unicorn-hat-java</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
+
+    <distributionManagement>
+        <repository>
+            <id>internal.repo</id>
+            <name>internal.repo</name>
+            <url>file:///Users/toby/Workspace/robotooling/maven</url>
+        </repository>
+    </distributionManagement>
 
     <dependencies>
         <dependency>
