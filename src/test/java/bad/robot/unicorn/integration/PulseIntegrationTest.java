@@ -12,6 +12,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import static bad.robot.unicorn.integration.CommandLine.*;
+import static bad.robot.unicorn.neopixel.PlatformSafeUnicorn.createPlatformSafeUnicorn;
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 import static java.util.stream.IntStream.range;
 
@@ -19,10 +20,11 @@ public class PulseIntegrationTest {
 
 	@Test
 	public void shouldPulse() {
-        shouldPulse(new Ws2811Unicorn());
+        shouldPulse(createPlatformSafeUnicorn(Ws2811Unicorn::new));
 	}
 
     private void shouldPulse(Unicorn unicorn) {
+        System.out.println(unicorn.getBrightness());
         List<Integer> zs = Arrays.asList(4, 3, 2, 1, 1, 2, 3, 4, 5, 6, 7, 8, 9);
         zs.stream().forEach(z -> {
             double radius = 5 / z;

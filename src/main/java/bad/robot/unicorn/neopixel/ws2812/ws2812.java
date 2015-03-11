@@ -12,18 +12,15 @@ import static bad.robot.unicorn.neopixel.Platform.runningOnPi;
 
 public class ws2812 {
 	static void init(int numPixels) {
-		if (runningOnPi())
-			ws2812JNI.init(numPixels);
+        ws2812JNI.init(numPixels);
 	}
 
 	static void clear() {
-		if (runningOnPi())
-			ws2812JNI.clear();
+        ws2812JNI.clear();
 	}
 
 	static void show() {
-		if (runningOnPi())
-			ws2812JNI.show();
+        ws2812JNI.show();
 	}
 
 	static Color_t Wheel(short WheelPos) {
@@ -35,30 +32,23 @@ public class ws2812 {
 	}
 
 	static void rainbow(short wait) {
-		if (runningOnPi())
-			ws2812JNI.rainbow(wait);
+        ws2812JNI.rainbow(wait);
 	}
 
 	static void rainbowCycle(short wait) {
-		if (runningOnPi())
-			ws2812JNI.rainbowCycle(wait);
+        ws2812JNI.rainbowCycle(wait);
 	}
 
 	static void theaterChase(Color_t c, short wait) {
-		if (runningOnPi())
-			ws2812JNI.theaterChase(Color_t.getCPtr(c), c, wait);
+        ws2812JNI.theaterChase(Color_t.getCPtr(c), c, wait);
 	}
 
 	static void theaterChaseRainbow(short wait) {
-		if (runningOnPi())
-			ws2812JNI.theaterChaseRainbow(wait);
+        ws2812JNI.theaterChaseRainbow(wait);
 	}
 
 	static short setBrightness(double b) {
-		if (runningOnPi())
-			return ws2812JNI.setBrightness(b);
-		else
-			return 0;
+        return ws2812JNI.setBrightness(b);
 	}
 
 	static double getBrightness() {
@@ -74,10 +64,7 @@ public class ws2812 {
 	}
 
 	static short setPixelColor(long pixel, short r, short g, short b) {
-		if (runningOnPi())
-			return ws2812JNI.setPixelColor(pixel, r, g, b);
-		else
-			return 0;
+        return ws2812JNI.setPixelColor(pixel, r, g, b);
 	}
 
 	static short setPixelColorT(long pixel, Color_t c) {

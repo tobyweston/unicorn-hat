@@ -15,6 +15,7 @@ import java.util.stream.Stream;
 import static bad.robot.unicorn.Coordinate.coordinate;
 import static bad.robot.unicorn.Sleep.sleep;
 import static bad.robot.unicorn.integration.CommandLine.createUnicorn;
+import static bad.robot.unicorn.neopixel.PlatformSafeUnicorn.createPlatformSafeUnicorn;
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 import static java.util.stream.IntStream.range;
 
@@ -27,7 +28,7 @@ public class ShowImageIntegrationTest {
 
 	@Test
 	public void displayImages() throws IOException {
-        displayImages(new Ws2811Unicorn());
+        displayImages(createPlatformSafeUnicorn(Ws2811Unicorn::new));
 	}
 
     private void displayImages(Unicorn unicorn) throws IOException {

@@ -12,6 +12,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import static bad.robot.unicorn.integration.CommandLine.*;
+import static bad.robot.unicorn.neopixel.PlatformSafeUnicorn.createPlatformSafeUnicorn;
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 import static java.util.stream.IntStream.range;
 
@@ -19,7 +20,7 @@ public class RainbowBlinkyIntegrationTest {
 
     @Test
     public void showColoursOfTheRainbowAndBlink() {
-        showColoursOfTheRainbowAndBlink(new Ws2811Unicorn());
+        showColoursOfTheRainbowAndBlink(createPlatformSafeUnicorn(Ws2811Unicorn::new));
     }
 
     private void showColoursOfTheRainbowAndBlink(Unicorn unicorn) {

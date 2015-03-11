@@ -1,6 +1,7 @@
 package bad.robot.unicorn.integration;
 
 import bad.robot.unicorn.Unicorn;
+import bad.robot.unicorn.neopixel.PlatformSafeUnicorn;
 import bad.robot.unicorn.neopixel.ws2811.Ws2811Unicorn;
 import org.junit.Test;
 
@@ -8,6 +9,7 @@ import java.awt.*;
 
 import static bad.robot.unicorn.Sleep.sleep;
 import static bad.robot.unicorn.integration.CommandLine.*;
+import static bad.robot.unicorn.neopixel.PlatformSafeUnicorn.createPlatformSafeUnicorn;
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 import static java.util.concurrent.TimeUnit.SECONDS;
 
@@ -15,7 +17,7 @@ public class BasicIntegrationTest {
 
 	@Test
 	public void switchOnEachLedInSequence() throws InterruptedException {
-        switchOnEachLedInSequence(new Ws2811Unicorn());
+        switchOnEachLedInSequence(createPlatformSafeUnicorn(Ws2811Unicorn::new));
 	}
 
     private void switchOnEachLedInSequence(Unicorn unicorn) {

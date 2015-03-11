@@ -3,11 +3,14 @@ package bad.robot.unicorn.integration;
 import bad.robot.unicorn.Sleep;
 import bad.robot.unicorn.Unicorn;
 import bad.robot.unicorn.neopixel.ws2811.Ws2811Unicorn;
+import bad.robot.unicorn.neopixel.ws2812.Ws2812Unicorn;
+import org.junit.After;
 import org.junit.Test;
 
 import java.awt.*;
 
-import static bad.robot.unicorn.integration.CommandLine.createUnicorn;
+import static bad.robot.unicorn.integration.CommandLine.*;
+import static bad.robot.unicorn.neopixel.PlatformSafeUnicorn.createPlatformSafeUnicorn;
 import static java.lang.Math.*;
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 import static java.util.stream.DoubleStream.iterate;
@@ -17,12 +20,12 @@ public class RainbowIntegrationTest {
 
 	@Test
 	public void shouldShowSimpleColoursOfTheRainbow() {
-        shouldShowSimpleColoursOfTheRainbow(new Ws2811Unicorn());
+        shouldShowSimpleColoursOfTheRainbow(createPlatformSafeUnicorn(Ws2811Unicorn::new));
     }
 
     @Test
     public void shouldShowFancyColoursOfTheRainbow() {
-        shouldShowFancyColoursOfTheRainbow(new Ws2811Unicorn());
+        shouldShowFancyColoursOfTheRainbow(createPlatformSafeUnicorn(Ws2811Unicorn::new));
     }
 
     private void shouldShowSimpleColoursOfTheRainbow(Unicorn unicorn) {
